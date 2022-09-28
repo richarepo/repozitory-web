@@ -3,7 +3,7 @@
 import React from "react";
 import { Box, Divider, Flex, ListItem, Text, UnorderedList } from "@chakra-ui/react";
 import Image from "next/image";
-import SuperHeroImage from "../../assets/section/superhero.webp";
+import SuperHeroImage from "../../../assets/section/superhero.webp";
 
 const specifications = ["Product management", "Quality of service", "Product design"];
 
@@ -54,7 +54,7 @@ const HeroSection = () => {
           <Specification />
         </Box>
         <Box>
-          <Image src={SuperHeroImage} height="700" width="600" />
+          <Image src={SuperHeroImage} height="700" width="600" alt="superhero" />
         </Box>
       </Flex>
     </Box>

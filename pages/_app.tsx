@@ -2,7 +2,7 @@
 
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
-import { Chakra } from "./src/Chakra";
+import { Chakra } from "../helpers/Chakra";
 import Header from './src/components/Header';
 
 interface IApp extends AppProps {

@@ -34,7 +34,7 @@ const SuccessStoryCard = ({
       cursor="pointer"
       {...rest}
     >
-      <Image height="30px" src={logo} width={`${logoWidth}px`} />
+      <Image height="30px" src={logo} width={`${logoWidth}px`} alt="icon" />
       <Heading mt="15px" fontSize="24px" color="#3d3d3d">
         {title}
       </Heading>
@@ -47,7 +47,7 @@ const SuccessStoryCard = ({
       </Text>
       <Divider borderColor={"black"} />
       <Flex justifyContent={"space-between"}>
-        {benefits.map(({ label, description }: any, index: number) => {
+        {!!benefits && benefits.length > 0 && benefits.map(({ label, description }: any, index: number) => {
           return (
             <Box mt="2%" key={index.toString()} maxW={"200px"}>
               <Text fontWeight="bold">{label} </Text>

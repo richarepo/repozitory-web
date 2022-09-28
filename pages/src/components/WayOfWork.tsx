@@ -3,9 +3,9 @@
 import React from "react";
 import { Box, Container, Flex, Text } from "@chakra-ui/react";
 import Image from "next/image";
-import SuperHeroImage from "../../assets/section/superhero.webp";
-import ProgrammerImage from "../../assets/section/programmer2.png";
-import { ALL_REPOZITORY_WAYS } from "../../helpers/constant";
+import SuperHeroImage from "../../../assets/section/superhero.webp";
+import ProgrammerImage from "../../../assets/section/programmer2.png";
+import { ALL_REPOZITORY_WAYS } from "../../../helpers/constant";
 import handleViewport from "react-in-viewport";
 
 const generateIcon = (data: any, iconBg: string) => {
@@ -21,11 +21,11 @@ const WayOfWork = (props: { inViewport: boolean; forwardedRef: any }) => {
         <Text fontSize="5xl" fontWeight="bold" color="#3d3d3d">
           The Repozitory Way
         </Text>
-        <Image src={SuperHeroImage} height="15vh" width="800" />
+        <Image src={SuperHeroImage} height="15vh" width="800" alt="superhero" />
       </Container>
       <Flex justifyContent="space-between" align={"center"}>
         <Box>
-          <Image src={ProgrammerImage} height="500" width="500" />
+          <Image src={ProgrammerImage} height="500" width="500" alt="programmer" />
         </Box>
         <Box
           bgColor="#227bed"

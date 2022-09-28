@@ -22,7 +22,7 @@ import {
   ChevronRightIcon,
 } from "@chakra-ui/icons";
 import Image from "next/image";
-import RepozitoryLogo from "../../assets/logo/header_logo.png";
+import RepozitoryLogo from "../../../assets/logo/header_logo.png";
 
 export default function Header() {
   const { isOpen, onToggle } = useDisclosure();
@@ -41,7 +41,7 @@ export default function Header() {
         align={"center"}
       >
         <Flex flex={{ base: 1, md: "auto" }} ml={{ base: -2 }}>
-          <Image src={RepozitoryLogo} layout="intrinsic" />
+          <Image src={RepozitoryLogo} layout="intrinsic" alt="repozitory" />
         </Flex>
         <Flex
           display={{ base: "flex", md: "none" }}

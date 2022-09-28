@@ -200,7 +200,7 @@ a {
 
 
 .contact-background-image {
-  background-image: url('../pages/assets/section/contact-bg.jpeg');
+  background-image: url('../assets/section/contact-bg.jpeg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;

@@ -15,7 +15,7 @@ import { ReactNode } from 'react';
 import { FaFacebook, FaLinkedinIn } from 'react-icons/fa';
 import { BiMailSend } from 'react-icons/bi';
 import Image from 'next/image';
-import RepozitoryLogo from "../../assets/logo/header_logo.png";
+import RepozitoryLogo from "../../../assets/logo/header_logo.png";
 
 const SocialButton = ({
   children,
@@ -68,7 +68,7 @@ export default function Footer() {
         >
           <Stack spacing={6}>
             <Box>
-              <Image src={RepozitoryLogo} layout="intrinsic" />
+              <Image src={RepozitoryLogo} layout="intrinsic" alt="repozitory" />
             </Box>
             <Text fontSize={"sm"}>
               © 2022 Repozitory technology. All rights reserved

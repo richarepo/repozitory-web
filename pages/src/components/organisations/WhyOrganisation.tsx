@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Box, Grid, Text } from "@chakra-ui/react";
-import { WHY_ORGANISATION_OPTIONS } from "../../../helpers/constant";
+import { WHY_ORGANISATION_OPTIONS } from "../../../../helpers/constant";
 import SuccessStoryCard from "./SuccessStoryCard";
 
 const WhyOrganisation = () => {
