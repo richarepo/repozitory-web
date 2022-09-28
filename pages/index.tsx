@@ -12,7 +12,6 @@ const Home: NextPage = () => {
     <Box>
       <Head>
         <title>Repozitory technology</title>
-        <link href="../styles/textAnimation.module.css" rel="stylesheet" key="test" />
       </Head>
       <HeroSection />
       <WayOfWork />
