@@ -8,17 +8,30 @@ import SuccessStoryCard from "./SuccessStoryCard";
 const WhyOrganisation = () => {
   return (
     <Box px="10%" my="4%" data-inviewport="scale-in">
-      <Text fontSize="5xl" fontWeight="bold" color="#3d3d3d">
+      <Text
+        fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
+        fontWeight="bold"
+        color="#3d3d3d"
+      >
         Why Organizations{" "}
         <Text as="span" borderBottom="4px" borderColor="#ffae1a">
           Choose Repozitory
         </Text>
       </Text>
-      <Text color="#3d3d3d" fontSize="20px">
+      <Text
+        color="#3d3d3d"
+        mt={{ base: "10px", md: "0px" }}
+        fontSize={{ base: "14px", md: "17px", lg: "20px" }}
+      >
         Discover the many ways in which our clients have embraced the benefits
         of our way of engineering.
       </Text>
-      <Grid mt="5%" px="5%" templateColumns="repeat(2, 1fr)" gap={6}>
+      <Grid
+        mt="5%"
+        px={{ base: "0%", md: "5%" }}
+        templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)" }}
+        gap={6}
+      >
         {WHY_ORGANISATION_OPTIONS.map(
           (
             { title, description, logo, benefits, logoWidth, bgColor }: any,

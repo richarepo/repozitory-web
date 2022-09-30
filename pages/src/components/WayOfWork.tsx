@@ -24,56 +24,71 @@ const WayOfWork = (props: { inViewport: boolean; forwardedRef: any }) => {
         <Image src={SuperHeroImage} height="15vh" width="800" alt="superhero" />
       </Container>
       <Flex justifyContent="space-between" align={"center"}>
-        <Box>
-          <Image src={ProgrammerImage} height="500" width="500" alt="programmer" />
+        <Box display={{ base: "none", md: "block" }}>
+          <Image
+            src={ProgrammerImage}
+            height="500"
+            width="500"
+            alt="programmer"
+          />
         </Box>
         <Box
           bgColor="#227bed"
-          w={"68%"}
-          h={"75vh"}
-          borderTopStartRadius={"200px"}
+          w={{ base: "100%", md: "68%" }}
+          py={{ base: "5%" }}
+          px={{ base: "3%" }}
+          boxSizing="border-box"
+          h={{ md: "75vh" }}
+          borderTopStartRadius={{ base: "0px", md: "200px" }}
           position="relative"
           ref={forwardedRef}
+          display={{ base: "flex", md: "block" }}
+          flexWrap={{ base: "wrap" }}
         >
-          {inViewport && ALL_REPOZITORY_WAYS.map(
-            (
-              { label, icon, iconBg, iconColor, ...rest }: any,
-              index: number
-            ) => {
-              return (
-                <Box
-                  p="2%"
-                  borderRadius="15px"
-                  bgColor="#fff"
-                  shadow="md"
-                  position="absolute"
-                  display="flex"
-                  flexDirection="column"
-                  alignItems="center"
-                  justifyContent="center"
-                  {...rest}
-                  minW={"230px"}
-                  maxW={"230px"}
-                  minH={"200px"}
-                  maxH={"200px"}
-                  key={index}
-                  className={`way-of-works-div${index}`}
-                >
+          {inViewport &&
+            ALL_REPOZITORY_WAYS.map(
+              (
+                { label, icon, iconBg, iconColor, ...rest }: any,
+                index: number
+              ) => {
+                return (
                   <Box
-                    p="20px 25px"
-                    bgColor={iconBg}
-                    width="fit-content"
-                    borderRadius="5px"
+                    p="2%"
+                    boxSizing="border-box"
+                    mt={{ base: "3%" }}
+                    ml={{ base: "15px" }}
+                    borderRadius="15px"
+                    bgColor="#fff"
+                    shadow="md"
+                    position={{ md: "absolute" }}
+                    display="flex"
+                    flexDirection="column"
+                    alignItems="center"
+                    justifyContent="center"
+                    {...rest}
+                    minW={{ base: "200px", md: "230px" }}
+                    maxW={{ base: "200px", md: "230px" }}
+                    minH={"200px"}
+                    maxH={"200px"}
+                    key={index}
+                    className={`way-of-works-div${index}`}
                   >
-                    {generateIcon(icon, iconColor)}
+                    <Box
+                      p={{ base: "10px 15px", md: "20px 25px" }}
+                      boxSizing="border-box"
+                      bgColor={iconBg}
+                      width="fit-content"
+                      borderRadius="5px"
+                    >
+                      {generateIcon(icon, iconColor)}
+                    </Box>
+                    <Text align={"center"} mt={"20px"}>
+                      {label}
+                    </Text>
                   </Box>
-                  <Text align={"center"} mt={"20px"}>
-                    {label}
-                  </Text>
-                </Box>
-              );
-            }
-          )}
+                );
+              }
+            )}
         </Box>
       </Flex>
     </Box>
