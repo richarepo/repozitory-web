@@ -1,11 +1,16 @@
 /** @format */
 
 import React from "react";
-import { Box, Divider, Flex, ListItem, Text, UnorderedList } from "@chakra-ui/react";
+import { Box, Divider, Flex, Text, UnorderedList } from "@chakra-ui/react";
 import Image from "next/image";
 import SuperHeroImage from "../../../assets/section/superhero.webp";
 
-const specifications = ["Product management", "Quality of service", "Product design"];
+const fontStyle = { base: "3xl", md: "4xl", lg: "5xl" };
+const specifications = [
+  "Product management",
+  "Quality of service",
+  "Product design",
+];
 
 const Specification = () => {
   return (
@@ -27,7 +32,10 @@ const Specification = () => {
 const HeroSection = () => {
   return (
     <Box h={"90vh"}>
-      <Flex justifyContent="space-between">
+      <Flex
+        justifyContent="space-between"
+        flexDir={{ base: "column-reverse", md: "row" }}
+      >
         <Box
           pl="10%"
           display="flex"
@@ -35,26 +43,53 @@ const HeroSection = () => {
           justifyContent="center"
           position="relative"
         >
-          <Text className="hero-animation-main-text" fontSize="5xl" fontWeight="bold" color="#3d3d3d">
+          <Text
+            className="hero-animation-main-text"
+            fontSize={fontStyle}
+            fontWeight="bold"
+            color="#3d3d3d"
+          >
             Users Centric
           </Text>
           <Flex align="center" ml="-18px">
-          <Box className="list-container">
-            <UnorderedList className="_list">
-              <Text fontSize="5xl" fontWeight="bold" color="red" className="item">Performance</Text>
-              <Text fontSize="5xl" fontWeight="bold" color="blue" className="item">Scalability</Text>
-              <Text fontSize="5xl" fontWeight="bold" color="green" className="item">Reliability</Text>
-              <Text fontSize="5xl" fontWeight="bold" color="brown" className="item">Availability</Text>
-            </UnorderedList>
-          </Box>
-          <Text fontSize="5xl" fontWeight="bold" color="#3d3d3d" ml="10px">
-            focused
+            <Box className="list-container">
+              <UnorderedList
+                fontWeight="bold"
+                fontSize={fontStyle}
+                className="_list"
+              >
+                <Text color="red" className="item">
+                  Performance
+                </Text>
+                <Text color="blue" className="item">
+                  Scalability
+                </Text>
+                <Text color="green" className="item">
+                  Reliability
+                </Text>
+                <Text color="brown" className="item">
+                  Availability
+                </Text>
+              </UnorderedList>
+            </Box>
+            <Text
+              fontSize={fontStyle}
+              fontWeight="bold"
+              color="#3d3d3d"
+              ml="10px"
+            >
+              focused
             </Text>
-            </Flex>
+          </Flex>
           <Specification />
         </Box>
-        <Box>
-          <Image src={SuperHeroImage} height="700" width="600" alt="superhero" />
+        <Box height={{ base: "100%", sm: "70%", md: "50%" }}>
+          <Image
+            src={SuperHeroImage}
+            height="700"
+            width="600"
+            alt="superhero"
+          />
         </Box>
       </Flex>
     </Box>
