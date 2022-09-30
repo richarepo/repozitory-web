@@ -1,12 +1,12 @@
-import VisiblyLogo from "../assets/logo/visibly.png";
 import FreeWireLogo from "../assets/logo/freewire.png";
+import SizeyLogo from "../assets/logo/sizey.png";
 import FlhLogo from "../assets/logo/flh.png";
 import CrayPayLogo from "../assets/logo/craypay.png";
 import { ChatIcon, CheckCircleIcon, SunIcon, TimeIcon, ViewIcon } from "@chakra-ui/icons";
 
 export const WHY_ORGANISATION_OPTIONS = [
   {
-    logo: VisiblyLogo,
+    logo: SizeyLogo,
     logoWidth: 110,
     bgColor: '#b1e2bf',
     title: "Software that digitize the eye test within five minutes",

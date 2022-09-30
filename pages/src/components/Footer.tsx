@@ -93,8 +93,6 @@ export default function Footer() {
             <Link href={"#"}>About us</Link>
             <Link href={"#"}>Blog</Link>
             <Link href={"#"}>Contact us</Link>
-            <Link href={"#"}>Pricing</Link>
-            <Link href={"#"}>Testimonials</Link>
           </Stack>
           <Stack align={"flex-start"}>
             <ListHeader>Support</ListHeader>
@@ -102,7 +100,6 @@ export default function Footer() {
             <Link href={"#"}>Terms of Service</Link>
             <Link href={"#"}>Legal</Link>
             <Link href={"#"}>Privacy Policy</Link>
-            <Link href={"#"}>Satus</Link>
           </Stack>
           <Stack align={"flex-start"}>
             <ListHeader>Stay up to date</ListHeader>
@@ -116,10 +113,10 @@ export default function Footer() {
                 }}
               />
               <IconButton
-                bg={useColorModeValue("green.400", "green.800")}
+                bg={useColorModeValue("blue.400", "blue.800")}
                 color={useColorModeValue("white", "gray.800")}
                 _hover={{
-                  bg: "green.600",
+                  bg: "blue.600",
                 }}
                 aria-label="Subscribe"
                 icon={<BiMailSend />}

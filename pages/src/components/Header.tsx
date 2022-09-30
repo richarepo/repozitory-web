@@ -40,7 +40,7 @@ export default function Header() {
         borderColor={useColorModeValue("gray.200", "gray.900")}
         align={"center"}
       >
-        <Flex flex={{ base: 1, md: "auto" }} ml={{ base: -2 }}>
+        <Flex pl="10%" flex={{ base: 1, md: "auto" }} ml={{ base: -2 }}>
           <Image src={RepozitoryLogo} layout="intrinsic" alt="repozitory" />
         </Flex>
         <Flex
@@ -265,7 +265,7 @@ const NAV_ITEMS: Array<NavItem> = [
     href: "#",
   },
   {
-    label: "Carrers",
+    label: "Careers",
     href: "#",
   },
 ];

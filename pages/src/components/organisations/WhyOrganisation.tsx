@@ -16,7 +16,7 @@ const WhyOrganisation = () => {
       </Text>
       <Text color="#3d3d3d" fontSize="20px">
         Discover the many ways in which our clients have embraced the benefits
-        of Simform way of engineering.
+        of our way of engineering.
       </Text>
       <Grid mt="5%" px="5%" templateColumns="repeat(2, 1fr)" gap={6}>
         {WHY_ORGANISATION_OPTIONS.map(
