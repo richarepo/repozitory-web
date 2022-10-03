@@ -1,5 +1,8 @@
 import FreeWireLogo from "../assets/logo/freewire.png";
 import SizeyLogo from "../assets/logo/sizey.png";
+import EargoLogo from "../assets/logo/eargo.png";
+import FidelixLogo from "../assets/logo/fidlix.png";
+import GetStatusLogo from "../assets/logo/GS.png";
 import FlhLogo from "../assets/logo/flh.png";
 import CrayPayLogo from "../assets/logo/craypay.png";
 import { ChatIcon, CheckCircleIcon, SunIcon, TimeIcon, ViewIcon } from "@chakra-ui/icons";
@@ -23,8 +26,8 @@ export const WHY_ORGANISATION_OPTIONS = [
     ]
   },
   {
-    logo: FreeWireLogo,
-    logoWidth: 200,
+    logo: EargoLogo,
+    logoWidth: 130,
     bgColor: '#b4c2e9',
     title: "EV charging platform to revolutionize the way we power everything",
     description: "FreeWire‘s Mobi Gen product line offers clean and quiet on-site power to substitute…",
@@ -40,8 +43,8 @@ export const WHY_ORGANISATION_OPTIONS = [
     ]
   },
   {
-    logo: FlhLogo,
-    logoWidth: 50,
+    logo: FidelixLogo,
+    logoWidth: 110,
     bgColor: '#ecccb7',
     title: "Improving the online web experience for International Hockey Federation (FIH)",
     description: "…they wanted increased user engagement, usability, discoverability, while providing…",
@@ -57,8 +60,8 @@ export const WHY_ORGANISATION_OPTIONS = [
     ]
   },
   {
-    logo: CrayPayLogo,
-    logoWidth: 120,
+    logo: GetStatusLogo,
+    logoWidth: 110,
     bgColor: '#eadab8',
     title: "M-payment solution to modernise retail buying experience",
     description: "…over 70% of consumers say that if they get benefits of loyalty points or perks in retail stores, they are ready…",
