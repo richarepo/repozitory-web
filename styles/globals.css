@@ -213,11 +213,11 @@ a {
 }
 
 .way-of-works-div3 {
-  animation: comeFromBottom 3s ease-in-out 1; 
+  animation: comeFromBottom 1.5s ease-in-out 1; 
 }
 
 .way-of-works-div2 {
-  animation: comeFromLaptop 3s ease-in-out 1;
+  animation: comeFromLaptop 1.5s ease-in-out 1;
 }
 
 @keyframes comeFromLaptop {
@@ -234,7 +234,7 @@ a {
   }
 
   99.9% {
-    top: 200px;
+    top: 140px;
     left: -100px;
     scale: 1;
   }
@@ -267,7 +267,7 @@ a {
   }
 
   100% {
-    bottom: -100px;
+    bottom: -50px;
     opacity: 1;
   }
 }
@@ -277,25 +277,22 @@ a {
     top: -200px;
   }
 
-  30%{
+  25%{
     top: 100px;
   }
 
-  60%{
-    top: 30px;
+  50%{
+    top: 10px;
   }
 
-  80%{
-    top: 60px;
+  75%{
+    top: 40px;
   }
 
-  90%{
-    top: 55px;
+  100%{
+    top: 21px;
   }
 
-  99%{
-    top: 50px;
-  }
 }
 
 .hero-animation-main-text{

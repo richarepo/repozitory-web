@@ -38,7 +38,7 @@ const SuccessStoryCard = ({
       <Heading mt="15px" fontSize="24px" color="#3d3d3d">
         {title}
       </Heading>
-      <Text mt={8}>{desc}</Text>
+      <Text noOfLines={2} mt={8}>{desc}</Text>
       <Text fontWeight="bold" mt="5%">
         Read more...
       </Text>
