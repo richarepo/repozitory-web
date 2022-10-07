@@ -38,6 +38,7 @@ a {
 }
 
 .list-container {
+  margin-left: -30px;
   height: 60px;
   overflow: hidden;
 }
@@ -234,8 +235,8 @@ a {
   }
 
   99.9% {
-    top: 200px;
-    left: -100px;
+    top: '30%';
+    left: '-14%';
     scale: 1;
   }
 }
