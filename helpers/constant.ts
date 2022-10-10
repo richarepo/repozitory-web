@@ -94,7 +94,7 @@ export const ALL_REPOZITORY_WAYS: any = [
     icon: SunIcon,
     iconBg: '#fceeef',
     iconColor: '#e6717b'
-  },
+  }, 
   {
     label: 'Better time management',
     top: '30%',
