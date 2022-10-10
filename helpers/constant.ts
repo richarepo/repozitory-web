@@ -1,10 +1,7 @@
-import FreeWireLogo from "../assets/logo/freewire.png";
 import SizeyLogo from "../assets/logo/sizey.png";
 import EargoLogo from "../assets/logo/eargo.png";
-import FidelixLogo from "../assets/logo/fidlix.png";
+import FidelixLogo from "../assets/logo/Fidlix.png";
 import GetStatusLogo from "../assets/logo/GS.png";
-import FlhLogo from "../assets/logo/flh.png";
-import CrayPayLogo from "../assets/logo/craypay.png";
 import { ChatIcon, CheckCircleIcon, SunIcon, TimeIcon, ViewIcon } from "@chakra-ui/icons";
 
 export const WHY_ORGANISATION_OPTIONS = [
