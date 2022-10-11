@@ -96,7 +96,6 @@ export default function Footer() {
           </Stack>
           <Stack align={"flex-start"}>
             <ListHeader>Support</ListHeader>
-            <Link href={"#"}>Help Center</Link>
             <Link href={"#"}>Terms of Service</Link>
             <Link href={"#"}>Legal</Link>
             <Link href={"#"}>Privacy Policy</Link>
