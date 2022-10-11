@@ -38,7 +38,7 @@ const TrendingBlog = ({ data }: any) => {
             Now see Eargos In-Person at Select...
           </Text>
           <Text fontSize="26px" color="#666" lineHeight="30px" mt="3%">
-            We are excited to announce that we've partnered with select Victra -
+            We are excited to announce that we ve partnered with select Victra -
             Verizon...
           </Text>
         </Box>
