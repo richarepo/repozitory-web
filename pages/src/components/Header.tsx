@@ -231,16 +231,16 @@ interface NavItem {
 
 const NAV_ITEMS: Array<NavItem> = [
   // {
-  //   label: "Inspiration",
+  //   label: "Blogs",
   //   children: [
   //     {
-  //       label: "Explore Design Work",
+  //       label: "Latest blogs",
   //       subLabel: "Trending Design to inspire you",
   //       href: "#",
   //     },
   //     {
-  //       label: "New & Noteworthy",
-  //       subLabel: "Up-and-coming Designers",
+  //       label: "All blogs",
+  //       subLabel: "Up-and-coming ",
   //       href: "#",
   //     },
   //   ],
@@ -260,6 +260,10 @@ const NAV_ITEMS: Array<NavItem> = [
   //     },
   //   ],
   // },
+  {
+    label: "Blogs",
+    href: "/blogs",
+  },
   {
     label: "Contact us",
     href: "#",
