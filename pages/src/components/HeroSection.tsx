@@ -4,6 +4,7 @@ import React from "react";
 import { Box, Divider, Flex, Text, UnorderedList } from "@chakra-ui/react";
 import Image from "next/image";
 import SuperHeroImage from "../../../assets/section/superhero.webp";
+import useColorManager from "../hooks/useColorManager";
 
 const fontStyle = { base: "3xl", md: "4xl", lg: "5xl" };
 const specifications = [
@@ -13,12 +14,13 @@ const specifications = [
 ];
 
 const Specification = () => {
+   const {offWhite}=useColorManager()
   return (
-    <Flex mt="10%">
+    <Flex mt="10%" >
       {specifications.map((specification, index) => {
         return (
           <Flex key={index}>
-            <Text as="span">{specification}</Text>{" "}
+            <Text as="span" color={offWhite}>{specification}</Text>{" "}
             {index + 1 < specifications.length && (
               <Divider orientation="vertical" mx="5px" borderColor={"black"} />
             )}
@@ -30,6 +32,7 @@ const Specification = () => {
 };
 
 const HeroSection = () => {
+  const {textColor}=useColorManager();
   return (
     <Box h={"90vh"}>
       <Flex
@@ -47,7 +50,7 @@ const HeroSection = () => {
             className="hero-animation-main-text"
             fontSize={fontStyle}
             fontWeight="bold"
-            color="#3d3d3d"
+            color={textColor}
           >
             Users Centric
           </Text>
@@ -75,7 +78,7 @@ const HeroSection = () => {
             <Text
               fontSize={fontStyle}
               fontWeight="bold"
-              color="#3d3d3d"
+              color={textColor}
               ml="10px"
             >
               focused

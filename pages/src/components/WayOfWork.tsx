@@ -7,6 +7,7 @@ import SuperHeroImage from "../../../assets/section/superhero.webp";
 import ProgrammerImage from "../../../assets/section/programmer2.png";
 import { ALL_REPOZITORY_WAYS } from "../../../helpers/constant";
 import handleViewport from "react-in-viewport";
+import useColorManager from "../hooks/useColorManager";
 
 const generateIcon = (data: any, iconBg: string) => {
   const Data = data;
@@ -15,10 +16,12 @@ const generateIcon = (data: any, iconBg: string) => {
 
 const WayOfWork = (props: { inViewport: boolean; forwardedRef: any }) => {
   const { inViewport, forwardedRef } = props;
+  const {textColor,bgGray,offWhite,blue}=useColorManager()
+
   return (
     <Box mb="13%">
       <Container mb="11%">
-        <Text fontSize="5xl" fontWeight="bold" color="#3d3d3d">
+        <Text fontSize="5xl" fontWeight="bold" color={textColor}>
           The Repozitory Way
         </Text>
         <Image src={SuperHeroImage} height="15vh" width="800" alt="superhero" />
@@ -33,7 +36,7 @@ const WayOfWork = (props: { inViewport: boolean; forwardedRef: any }) => {
           />
         </Box>
         <Box
-          bgColor="#227bed"
+          bgColor={blue}
           w={{ base: "100%", md: "68%" }}
           py={{ base: "5%" }}
           px={{ base: "3%" }}
@@ -58,7 +61,7 @@ const WayOfWork = (props: { inViewport: boolean; forwardedRef: any }) => {
                     mt={{ base: "3%" }}
                     ml={{ base: "15px" }}
                     borderRadius="15px"
-                    bgColor="#fff"
+                    bgColor={bgGray}
                     shadow="md"
                     position={{ md: "absolute" }}
                     display="flex"
@@ -82,7 +85,7 @@ const WayOfWork = (props: { inViewport: boolean; forwardedRef: any }) => {
                     >
                       {generateIcon(icon, iconColor)}
                     </Box>
-                    <Text align={"center"} mt={"20px"}>
+                    <Text align={"center"} mt={"20px"} color={offWhite}>
                       {label}
                     </Text>
                   </Box>

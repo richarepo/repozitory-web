@@ -1,17 +1,19 @@
 /** @format */
 
 import React from "react";
-import { Box, Grid, Text } from "@chakra-ui/react";
+import { Box, Grid, Text, useColorModeValue } from "@chakra-ui/react";
 import { WHY_ORGANISATION_OPTIONS } from "../../../../helpers/constant";
 import SuccessStoryCard from "./SuccessStoryCard";
+import useColorManager from "../../hooks/useColorManager";
 
 const WhyOrganisation = () => {
+const {textColor}=useColorManager()
   return (
     <Box px="10%" my="4%" data-inviewport="scale-in">
       <Text
         fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
         fontWeight="bold"
-        color="#3d3d3d"
+        color={textColor}
       >
         Why Organizations{" "}
         <Text as="span" borderBottom="4px" borderColor="#ffae1a">
@@ -19,7 +21,7 @@ const WhyOrganisation = () => {
         </Text>
       </Text>
       <Text
-        color="#3d3d3d"
+        color={textColor}
         mt={{ base: "10px", md: "0px" }}
         fontSize={{ base: "14px", md: "17px", lg: "20px" }}
       >
@@ -37,6 +39,7 @@ const WhyOrganisation = () => {
             { title, description, logo, benefits, logoWidth, bgColor }: any,
             index: number
           ) => {
+            const cardColor=useColorModeValue(bgColor,"gray.700")
             return (
               <SuccessStoryCard
                 key={index.toString()}
@@ -45,7 +48,7 @@ const WhyOrganisation = () => {
                 benefits={benefits}
                 logo={logo}
                 logoWidth={logoWidth}
-                bgColor={bgColor}
+                bgColor={cardColor}
               />
             );
           }

@@ -23,14 +23,16 @@ import {
 } from "@chakra-ui/icons";
 import Image from "next/image";
 import RepozitoryLogo from "../../../assets/logo/header_logo.png";
+import { ColorModeSwitcher } from "../ColorModeSwitcher";
+import useColorManager from "../hooks/useColorManager";
 
 export default function Header() {
   const { isOpen, onToggle } = useDisclosure();
-
+  const {bgGray}=useColorManager()
   return (
     <Box>
       <Flex
-        bg={useColorModeValue("white", "gray.800")}
+        bg={bgGray}
         color={useColorModeValue("gray.600", "white")}
         minH={"60px"}
         py={{ base: 2 }}
@@ -74,8 +76,9 @@ const DesktopNav = () => {
   const linkHoverColor = useColorModeValue("gray.800", "white");
   const popoverContentBgColor = useColorModeValue("white", "gray.800");
 
+
   return (
-    <Stack direction={"row"} spacing={4}>
+    <Stack direction={"row"} spacing={4} alignItems={"center"} bgColor={useColorModeValue("white","gray.700")}>
       {NAV_ITEMS.map((navItem) => (
         <Box key={navItem.label}>
           <Popover trigger={"hover"} placement={"bottom-start"}>
@@ -107,13 +110,14 @@ const DesktopNav = () => {
                 <Stack>
                   {navItem.children.map((child) => (
                     <DesktopSubNav key={child.label} {...child} />
-                  ))}
+                  ))}                 
                 </Stack>
               </PopoverContent>
             )}
           </Popover>
         </Box>
       ))}
+      <ColorModeSwitcher justifySelf="flex-end" />
     </Stack>
   );
 };

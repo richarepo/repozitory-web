@@ -14,8 +14,51 @@ import { FiUser, FiMail, FiGlobe, FiPhoneCall, FiEdit } from "react-icons/fi";
 import { BiPhoneCall } from "react-icons/bi";
 import { SiGooglemaps } from "react-icons/si";
 import { AiOutlineFieldTime } from "react-icons/ai";
+import useColorManager from "../hooks/useColorManager";
 
 const ContactUs = () => {
+const {bgWtG,darkBlue}=useColorManager()
+
+const info: any = [
+  {
+    heading: "Call us",
+    Icon: BiPhoneCall,
+    content: "1(234)567-890 or 0(987)654-321",
+  },
+  {
+    heading: "Location",
+    Icon: SiGooglemaps,
+    content: "Building no. 591, Sector-14 -125001, Hisar (Haryana)",
+  },
+  {
+    heading: "Business Hours",
+    Icon: AiOutlineFieldTime,
+    content: "Mon-Fri.....9 am-6 pm, Sat-Sun.....Closed",
+  },
+];
+
+ const ContactHeading = () => {
+  return (
+    <>
+      {info.map(({ heading, Icon, content }: any,index:any) => {
+        return (
+          <Box key={index}>
+            <Flex alignItems="flex-end" mt="10%">
+              <Icon fontSize="46px" color="#227bed"/>
+              <Text ml="5px" fontSize="28px" fontWeight="bold" color="#fff">
+                {heading}
+              </Text>
+            </Flex>
+            <Flex color="#fff" mt="3%">
+              <Text>{content}</Text>
+            </Flex>
+          </Box>
+        );
+      })}
+    </>
+  );
+};
+
   return (
     <Box className="contact-background-image" pl="5%" pr="5%" display="flex">
       <Box w="40%">
@@ -26,36 +69,7 @@ const ContactUs = () => {
         >
           Contact Us
         </Text>
-
-        <Flex alignItems="flex-end" mt="10%">
-          <BiPhoneCall fontSize="46px" color="#227bed" />
-          <Text ml="5px" fontSize="28px" fontWeight="bold" color="#fff">
-            Call Us
-          </Text>
-        </Flex>
-        <Flex color="#fff" mt="3%">
-          <Text>1(234)567-890,</Text>
-          <Text ml="10px">0(987)654-321</Text>
-        </Flex>
-
-        <Flex alignItems="flex-end" mt="10%">
-          <SiGooglemaps fontSize="46px" color="#227bed" />
-          <Text ml="5px" fontSize="28px" fontWeight="bold" color="#fff">
-            Location
-          </Text>
-        </Flex>
-        <Flex color="#fff" mt="3%">
-          <Text>Building no. 591, Sector-14 -125001, Hisar (Haryana)</Text>
-        </Flex>
-        <Flex alignItems="flex-end" mt="10%">
-          <AiOutlineFieldTime fontSize="46px" color="#227bed" />
-          <Text ml="5px" fontSize="28px" fontWeight="bold" color="#fff">
-            Business Hours
-          </Text>
-        </Flex>
-        <Flex color="#fff" mt="3%">
-          <Text>Mon-Fri.....9 am-6 pm, Sat-Sun.....Closed</Text>
-        </Flex>
+       <ContactHeading />
       </Box>
       <Box w="60%" mt="5%">
         <Flex>
@@ -146,7 +160,7 @@ const ContactUs = () => {
             </Flex>
           </GridItem>
         </Grid>
-        <Button mt="20px" colorScheme="blue" w={300}>
+        <Button mt="20px" colorScheme="blue" w={300} bgColor={darkBlue}>
           Send
         </Button>
       </Box> */}
