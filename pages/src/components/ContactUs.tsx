@@ -54,6 +54,7 @@ const ContactUs = () => {
       display="flex"
       flexDir={{ base: "column", md: "row" }}
       alignItems={{ base: "center", md: "flex-start" }}
+      id="contact_us"
     >
       <Box w={{ lg: "40%", md: "100%" }}>
         <Text
