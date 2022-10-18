@@ -23,7 +23,7 @@ import {
 } from "@chakra-ui/icons";
 import Image from "next/image";
 import RepozitoryLogo from "../../../assets/logo/header_logo.png";
-import  ColorModeSwitcher  from "../ColorModeSwitcher";
+import ColorModeSwitcher from "../ColorModeSwitcher";
 import useColorManager from "../hooks/useColorManager";
 
 export default function Header() {
