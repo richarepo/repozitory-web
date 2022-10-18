@@ -39,7 +39,6 @@ const {textColor}=useColorManager()
             { title, description, logo, benefits, logoWidth, bgColor }: any,
             index: number
           ) => {
-            const cardColor=useColorModeValue(bgColor,"gray.700")
             return (
               <SuccessStoryCard
                 key={index.toString()}
@@ -48,7 +47,7 @@ const {textColor}=useColorManager()
                 benefits={benefits}
                 logo={logo}
                 logoWidth={logoWidth}
-                bgColor={cardColor}
+                bgColor={bgColor}
               />
             );
           }

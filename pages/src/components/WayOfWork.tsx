@@ -16,7 +16,7 @@ const generateIcon = (data: any, iconBg: string) => {
 
 const WayOfWork = (props: { inViewport: boolean; forwardedRef: any }) => {
   const { inViewport, forwardedRef } = props;
-  const {textColor,bgGray,offWhite,blue}=useColorManager()
+  const { textColor, bgWtG, offWhite, blue } = useColorManager();
 
   return (
     <Box mb="13%">
@@ -61,7 +61,7 @@ const WayOfWork = (props: { inViewport: boolean; forwardedRef: any }) => {
                     mt={{ base: "3%" }}
                     ml={{ base: "15px" }}
                     borderRadius="15px"
-                    bgColor={bgGray}
+                    bgColor={bgWtG}
                     shadow="md"
                     position={{ md: "absolute" }}
                     display="flex"
@@ -80,7 +80,7 @@ const WayOfWork = (props: { inViewport: boolean; forwardedRef: any }) => {
                       p={{ base: "10px 15px", md: "20px 25px" }}
                       boxSizing="border-box"
                       bgColor={iconBg}
-                      width="fit-content"
+                      w="fit-content"
                       borderRadius="5px"
                     >
                       {generateIcon(icon, iconColor)}

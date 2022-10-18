@@ -11,56 +11,51 @@ import {
   Button,
 } from "@chakra-ui/react";
 import { FiUser, FiMail, FiGlobe, FiPhoneCall, FiEdit } from "react-icons/fi";
-import { BiPhoneCall } from "react-icons/bi";
-import { SiGooglemaps } from "react-icons/si";
-import { AiOutlineFieldTime } from "react-icons/ai";
+
 import useColorManager from "../hooks/useColorManager";
+import { CONTACT_INFO } from "../../../helpers/constant";
 
 const ContactUs = () => {
-const {bgWtG,darkBlue}=useColorManager()
 
-const info: any = [
-  {
-    heading: "Call us",
-    Icon: BiPhoneCall,
-    content: "1(234)567-890 or 0(987)654-321",
-  },
-  {
-    heading: "Location",
-    Icon: SiGooglemaps,
-    content: "Building no. 591, Sector-14 -125001, Hisar (Haryana)",
-  },
-  {
-    heading: "Business Hours",
-    Icon: AiOutlineFieldTime,
-    content: "Mon-Fri.....9 am-6 pm, Sat-Sun.....Closed",
-  },
-];
-
- const ContactHeading = () => {
-  return (
-    <>
-      {info.map(({ heading, Icon, content }: any,index:any) => {
-        return (
-          <Box key={index}>
-            <Flex alignItems="flex-end" mt="10%">
-              <Icon fontSize="46px" color="#227bed"/>
-              <Text ml="5px" fontSize="28px" fontWeight="bold" color="#fff">
-                {heading}
-              </Text>
-            </Flex>
-            <Flex color="#fff" mt="3%">
-              <Text>{content}</Text>
-            </Flex>
-          </Box>
-        );
-      })}
-    </>
-  );
-};
+  const ContactHeading = () => {
+    return (
+      <>
+        {CONTACT_INFO.map(({ heading, Icon, content }: any, index: any) => {
+          return (
+            <Box key={index}>
+              <Flex alignItems={{ base: "center", lg: "flex-end" }} mt="10%">
+                <Box fontSize={{ base: "20px", lg: "46px" }}>
+                  {" "}
+                  <Icon color="#227bed" />
+                </Box>
+                <Text
+                  ml="5px"
+                  fontSize={{ base: "20px", lg: "28px" }}
+                  fontWeight="bold"
+                  color="#fff"
+                >
+                  {heading}
+                </Text>
+              </Flex>
+              <Flex color="#fff" mt="3%">
+                <Text>{content}</Text>
+              </Flex>
+            </Box>
+          );
+        })}
+      </>
+    );
+  };
 
   return (
-    <Box className="contact-background-image" pl="5%" pr="5%" display="flex">
+    <Box
+      className="contact-background-image"
+      pl="5%"
+      pr="5%"
+      display="flex"
+      flexDir={{ base: "column", md: "row" }}
+      alignItems={{ base: "center", md: "flex-start" }}
+    >
       <Box w="40%">
         <Text
           fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
@@ -69,38 +64,60 @@ const info: any = [
         >
           Contact Us
         </Text>
-       <ContactHeading />
+        <ContactHeading />
       </Box>
       <Box w="60%" mt="5%">
-        <Flex>
-          <Flex align={"center"}>
-            <Icon as={FiUser} w={6} h={6} mx="5px" color="#fff" />
-            <Input width="350px" placeholder="Name" size="lg" color="#fff" />
+        <Flex
+          flexDir={{ base: "column", md: "column", lg: "row" }}
+          gap={{ base: "1rem", lg: "2.5rem" }}
+        >
+          <Flex align={"center"} gap={{ base: "7px", lg: "12px" }}>
+            <Icon as={FiUser} w={6} h={6} color="#fff" />
+            <Input
+              w={{ base: "300px", md: "450px", lg: "300px" }}
+              placeholder="Name"
+              size="lg"
+              color="#fff"
+            />
           </Flex>
 
-          <Flex align={"center"} ml="10px">
-            <Icon as={FiMail} w={6} h={6} mx="5px" color="#fff" />
-            <Input width="350px" placeholder="Email" size="lg" color="#fff" />
+          <Flex align={"center"} gap={{ base: "7px", lg: "12px" }}>
+            <Icon as={FiMail} w={6} h={6} color="#fff" />
+            <Input
+              w={{ base: "300px", md: "450px", lg: "285px" }}
+              placeholder="Email"
+              size="lg"
+              color="#fff"
+            />
           </Flex>
         </Flex>
-        <Flex mt="40px">
-          <Flex align={"center"}>
-            <Icon as={FiGlobe} w={6} h={6} mx="5px" color="#fff" />
-            <Input width="350px" placeholder="Country" size="lg" color="#fff" />
+        <Flex
+          mt={{ base: "1rem", md: "25px", lg: "40px" }}
+          flexDir={{ base: "column", md: "column", lg: "row" }}
+          gap={{ base: "1rem", lg: "2.5rem" }}
+        >
+          <Flex align={"center"} gap={{ base: "7px", lg: "12px" }}>
+            <Icon as={FiGlobe} w={6} h={6} color="#fff" />
+            <Input
+              w={{ base: "300px", md: "450px", lg: "300px" }}
+              placeholder="Country"
+              size="lg"
+              color="#fff"
+            />
           </Flex>
 
-          <Flex align={"center"} ml="10px">
-            <Icon as={FiPhoneCall} w={6} h={6} mx="5px" color="#fff" />
+          <Flex align={"center"} gap={{ base: "7px", lg: "12px" }}>
+            <Icon as={FiPhoneCall} w={6} h={6} color="#fff" />
             <Input
-              width="350px"
+              w={{ base: "300px", md: "450px", lg: "285px" }}
               placeholder="Phone number"
               size="lg"
               color="#fff"
             />
           </Flex>
         </Flex>
-        <Flex mt="40px">
-          <Icon as={FiEdit} w={6} h={6} mx="5px" color="#fff" />
+        <Flex mt="40px" gap={{ base: "7px", lg: "12px" }}>
+          <Icon as={FiEdit} w={6} h={6} color="#fff" />
           <Textarea
             placeholder="Message"
             size="lg"
@@ -115,55 +132,6 @@ const info: any = [
           </Button>
         </Flex>
       </Box>
-
-      {/* <Box
-        display={{ md: "flex" }}
-        flexDirection={{ md: "column" }}
-        alignItems={{ md: "center" }}
-        mt={"3%"}
-      >
-        <Grid
-          templateColumns="repeat(2, 1fr)"
-          gap={6}
-          w={{ base: "90%", md: "65%" }}
-        >
-          <Flex align={"center"}>
-            <Icon as={FiUser} w={6} h={6} mx="5px" color="#fff" />
-            <Input placeholder="Name" size="lg" color="#fff" />
-          </Flex>
-
-          <Flex align={"center"}>
-            <Icon as={FiMail} w={6} h={6} mx="5px" color="#fff" />
-            <Input placeholder="Email" size="lg" color="#fff" />
-          </Flex>
-
-          <Flex align={"center"}>
-            <Icon as={FiGlobe} w={6} h={6} mx="5px" color="#fff" />
-            <Input placeholder="Country" size="lg" color="#fff" />
-          </Flex>
-
-          <Flex align={"center"}>
-            <Icon as={FiPhoneCall} w={6} h={6} mx="5px" color="#fff" />
-            <Input placeholder="Phone number" size="lg" color="#fff" />
-          </Flex>
-
-          <GridItem colSpan={2}>
-            <Flex>
-              <Icon as={FiEdit} w={6} h={6} mx="5px" color="#fff" />
-              <Textarea
-                placeholder="Message"
-                size="lg"
-                resize={"vertical"}
-                rows={7}
-                color="#fff"
-              />
-            </Flex>
-          </GridItem>
-        </Grid>
-        <Button mt="20px" colorScheme="blue" w={300} bgColor={darkBlue}>
-          Send
-        </Button>
-      </Box> */}
     </Box>
   );
 };

@@ -2,24 +2,40 @@ import React from "react";
 import { useColorModeValue } from "@chakra-ui/react";
 
 const color={
-  gray:"gray.700",
-  darkGray:"gray.900",
-  textGray:"gray.600",
-  white:"white.100",
-  offWhite:"#DAD2C5",
-  darkOffWhite:"#C6BEB1",
-  darkBlue:"blue.800"
+  WHITE:"#fff", 
+  OFF_WHITE:"#DAD2C5",
+  DARK_OFF_WHITE:"#C6BEB1",
+  GHOST_WHITE:"#f2f6f8",
+  
+  BLACK:"#000000",
+  DARK_CHARCOAL:"#333",
+
+  TEXT_GRAY:"gray.600",
+  GRAY_700:"gray.700",
+  GRAY_800:"gray.800",
+  DARK_GRAY:"gray.900",
+
+  BLUE_200:"blue.200",
+  BLUE_700:"blue.700",
+  DARK_BLUE:"blue.800",
+
+  AZURE:"#227bed",
 }
 
 const useColorManager = () => {
-  const bgGray  = useColorModeValue("#fff", color.gray);
-  const bgWtG  = useColorModeValue("#fff", color.gray);
-  const textColor= useColorModeValue("#3d3d3d",color.textGray);
-  const offWhite =useColorModeValue("#000000",color.offWhite)
-  const darkOffWhite=useColorModeValue("#000000",color.darkOffWhite)
-  const darkBlue=useColorModeValue("blue.200",color.darkBlue)
-  const blue=useColorModeValue("#227bed","blue.700")
-  return { bgGray,bgWtG,textColor,offWhite ,darkOffWhite,darkBlue,blue};
+  const bgWtG  = useColorModeValue(color.WHITE, color.GRAY_700);
+  const textColor= useColorModeValue(color.DARK_GRAY,color.TEXT_GRAY);
+  const offWhite =useColorModeValue(color.BLACK,color.OFF_WHITE)
+  const darkOffWhite=useColorModeValue(color.BLACK,color.DARK_OFF_WHITE)
+  const darkBlue=useColorModeValue(color.BLUE_200,color.DARK_BLUE)
+  const blue=useColorModeValue(color.AZURE,color.BLUE_700)
+  const BLACK_GRAY=useColorModeValue(color.DARK_CHARCOAL,color.TEXT_GRAY)
+  const BLACK_DGRAY=useColorModeValue(color.DARK_CHARCOAL,color.DARK_GRAY)
+  const LGRAY_DGRAY=useColorModeValue(color.GHOST_WHITE,color.GRAY_700)
+  const LGRAY_BLACK=useColorModeValue(color.GHOST_WHITE,color.GRAY_800)
+  const WHITE_LGRAY=useColorModeValue(color.WHITE,color.GRAY_700);
+  const BLACK_WHITE=useColorModeValue(color.BLACK,color.WHITE)
+  return { bgWtG,LGRAY_BLACK,textColor,offWhite ,darkOffWhite,darkBlue,blue,BLACK_GRAY,LGRAY_DGRAY,BLACK_DGRAY,WHITE_LGRAY,BLACK_WHITE};
 };
 
 export default useColorManager;

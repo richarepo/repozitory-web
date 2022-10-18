@@ -2,7 +2,30 @@ import SizeyLogo from "../assets/logo/sizey.png";
 import EargoLogo from "../assets/logo/eargo.png";
 import FidelixLogo from "../assets/logo/Fidlix.png";
 import GetStatusLogo from "../assets/logo/GS.png";
+import { BiPhoneCall } from "react-icons/bi";
+import { SiGooglemaps } from "react-icons/si";
+import { AiOutlineFieldTime } from "react-icons/ai";
 import { ChatIcon, CheckCircleIcon, SunIcon, TimeIcon, ViewIcon } from "@chakra-ui/icons";
+
+export const SERVER_URL = "http://localhost:8000";
+
+export const CONTACT_INFO: any = [
+    {
+      heading: "Call us",
+      Icon: BiPhoneCall,
+      content: "1(234)567-890 or 0(987)654-321",
+    },
+    {
+      heading: "Location",
+      Icon: SiGooglemaps,
+      content: "Building no. 591, Sector-14 -125001, Hisar (Haryana)",
+    },
+    {
+      heading: "Business Hours",
+      Icon: AiOutlineFieldTime,
+      content: "Mon-Fri.....9 am-6 pm, Sat-Sun.....Closed",
+    },
+  ];
 
 export const WHY_ORGANISATION_OPTIONS = [
   {

@@ -23,16 +23,16 @@ import {
 } from "@chakra-ui/icons";
 import Image from "next/image";
 import RepozitoryLogo from "../../../assets/logo/header_logo.png";
-import { ColorModeSwitcher } from "../ColorModeSwitcher";
+import  ColorModeSwitcher  from "../ColorModeSwitcher";
 import useColorManager from "../hooks/useColorManager";
 
 export default function Header() {
   const { isOpen, onToggle } = useDisclosure();
-  const {bgGray}=useColorManager()
+  const {bgWtG}=useColorManager()
   return (
     <Box>
       <Flex
-        bg={bgGray}
+        bg={bgWtG}
         color={useColorModeValue("gray.600", "white")}
         minH={"60px"}
         py={{ base: 2 }}
@@ -43,7 +43,7 @@ export default function Header() {
         align={"center"}
       >
         <Flex pl="10%" flex={{ base: 1, md: "auto" }} ml={{ base: -2 }}>
-          <Image src={RepozitoryLogo} layout="intrinsic" alt="repozitory" />
+          <Link href='/'><Image src={RepozitoryLogo} layout="intrinsic" alt="repozitory" /></Link>
         </Flex>
         <Flex
           display={{ base: "flex", md: "none" }}
@@ -75,10 +75,10 @@ const DesktopNav = () => {
   const linkColor = useColorModeValue("gray.600", "gray.200");
   const linkHoverColor = useColorModeValue("gray.800", "white");
   const popoverContentBgColor = useColorModeValue("white", "gray.800");
-
+   const {bgWtG}=useColorManager()
 
   return (
-    <Stack direction={"row"} spacing={4} alignItems={"center"} bgColor={useColorModeValue("white","gray.700")}>
+    <Stack direction={"row"} spacing={4} alignItems={"center"} bgColor={bgWtG}>
       {NAV_ITEMS.map((navItem) => (
         <Box key={navItem.label}>
           <Popover trigger={"hover"} placement={"bottom-start"}>
