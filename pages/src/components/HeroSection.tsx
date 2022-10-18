@@ -4,7 +4,7 @@ import React from "react";
 import { Box, Divider, Flex, Text, UnorderedList } from "@chakra-ui/react";
 import Image from "next/image";
 import SuperHeroImage from "../../../assets/section/superhero.webp";
-import useColorManager from "../hooks/useColorManager";
+import useColorManager from "../../../helpers/hooks/useColorManager";
 
 const fontStyle = { base: "3xl", md: "4xl", lg: "5xl" };
 const specifications = [

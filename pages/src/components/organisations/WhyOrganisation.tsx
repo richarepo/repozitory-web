@@ -1,13 +1,15 @@
 /** @format */
 
 import React from "react";
-import { Box, Grid, Text, useColorModeValue } from "@chakra-ui/react";
+import { Box, Grid, Text, useColorMode } from "@chakra-ui/react";
 import { WHY_ORGANISATION_OPTIONS } from "../../../../helpers/constant";
 import SuccessStoryCard from "./SuccessStoryCard";
-import useColorManager from "../../hooks/useColorManager";
+import useColorManager from "../../../../helpers/hooks/useColorManager";
 
 const WhyOrganisation = () => {
-const {textColor}=useColorManager()
+  const { textColor } = useColorManager();
+  const { colorMode } = useColorMode();
+  
   return (
     <Box px="10%" my="4%" data-inviewport="scale-in">
       <Text
@@ -48,7 +50,7 @@ const {textColor}=useColorManager()
                 logo={logo}
                 height={height}
                 logoWidth={logoWidth}
-                bgColor={useColorModeValue(bgColor, "gray.700")}
+                bgColor={colorMode === 'light'? bgColor : "gray.700"}
               />
             );
           }

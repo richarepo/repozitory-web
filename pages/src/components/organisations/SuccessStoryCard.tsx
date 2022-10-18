@@ -4,7 +4,7 @@ import { Box, Flex, Heading, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import React from "react";
 import { Divider } from "@chakra-ui/react";
-import useColorManager from "../../hooks/useColorManager";
+import useColorManager from "../../../../helpers/hooks/useColorManager";
 
 export interface ICard {
   title: string;

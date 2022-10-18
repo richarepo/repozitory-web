@@ -1,33 +1,32 @@
 /** @format */
 
-import { Box, Flex } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import React from "react";
-import { blogData } from "../api/apiRequest";
-import AllBlogs from "./components/AllBlogs";
-import Categories from "./components/Categories";
-import MernTech from "./components/MernTech";
-import TrendingBlog from "./components/TrendingBlog";
+// import AllBlogs from "./components/AllBlogs";
+// import Categories from "./components/Categories";
+// import MernTech from "./components/MernTech";
+// import TrendingBlog from "./components/TrendingBlog";
 
-const Blogs = (props: any) => {
-  const { trendingBlog, categories, blogs } = props;
+const Blogs = () => {
+  // const { trendingBlog, categories, blogs } = props;
   return (
     <Box>
-      <TrendingBlog trendingBlog={trendingBlog} />
+      {/* <TrendingBlog trendingBlog={trendingBlog} />
       <MernTech />
       <Flex justifyContent={"center"}>
         <AllBlogs blogs={blogs} />
         <Categories categories={categories} trendingBlog={trendingBlog} />
-      </Flex>
+      </Flex> */}
     </Box>
   );
 };
 
-export const getServerSideProps = async () => {
-  // Fetch data from external API
-  const res: any = await blogData();
+// export const getServerSideProps = async () => {
+//   // Fetch data from external API
+//   const res: any = await blogData();
 
-  // Pass data to the page via props
-  return { props: res };
-};
+//   // Pass data to the page via props
+//   return { props: res };
+// };
 
 export default Blogs;

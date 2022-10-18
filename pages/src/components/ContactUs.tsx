@@ -12,7 +12,7 @@ import {
 } from "@chakra-ui/react";
 import { FiUser, FiMail, FiGlobe, FiPhoneCall, FiEdit } from "react-icons/fi";
 
-import useColorManager from "../hooks/useColorManager";
+import useColorManager from "../../../helpers/hooks/useColorManager";
 import { CONTACT_INFO } from "../../../helpers/constant";
 
 const ContactUs = () => {

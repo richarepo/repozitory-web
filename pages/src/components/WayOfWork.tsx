@@ -7,7 +7,7 @@ import SuperHeroImage from "../../../assets/section/superhero.webp";
 import ProgrammerImage from "../../../assets/section/programmer2.png";
 import { ALL_REPOZITORY_WAYS } from "../../../helpers/constant";
 import handleViewport from "react-in-viewport";
-import useColorManager from "../hooks/useColorManager";
+import useColorManager from "../../../helpers/hooks/useColorManager";
 
 const generateIcon = (data: any, iconBg: string) => {
   const Data = data;
