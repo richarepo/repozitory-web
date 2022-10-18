@@ -47,7 +47,7 @@ const {textColor}=useColorManager()
                 benefits={benefits}
                 logo={logo}
                 logoWidth={logoWidth}
-                bgColor={bgColor}
+                bgColor={useColorModeValue(bgColor, "gray.700")}
               />
             );
           }
