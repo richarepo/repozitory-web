@@ -1,7 +1,7 @@
 import SizeyLogo from "../assets/logo/sizey.png";
 import EargoLogo from "../assets/logo/eargo.png";
 import FidelixLogo from "../assets/logo/Fidlix.png";
-import GetStatusLogo from "../assets/logo/GS.png";
+import GetStatusLogo from "../assets/logo/GS grey.png";
 import { BiPhoneCall } from "react-icons/bi";
 import { SiGooglemaps } from "react-icons/si";
 import { AiOutlineFieldTime } from "react-icons/ai";
@@ -30,7 +30,8 @@ export const CONTACT_INFO: any = [
 export const WHY_ORGANISATION_OPTIONS = [
   {
     logo: GetStatusLogo,
-    logoWidth: 110,
+    height: '40px',
+    logoWidth: 120,
     bgColor: '#b1e2bf',
     title: "Leading technology for project management in urban renewal.",
     description: "An urban renewal project is a complex and long project involving many professionals. To help you succeed in the long and complicated process, the Get Status technological system was developed. The system contributes efficiency and satisfaction of the apartment owners",

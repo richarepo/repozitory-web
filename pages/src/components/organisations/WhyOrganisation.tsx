@@ -36,7 +36,7 @@ const {textColor}=useColorManager()
       >
         {WHY_ORGANISATION_OPTIONS.map(
           (
-            { title, description, logo, benefits, logoWidth, bgColor }: any,
+            { title, description, logo, benefits, logoWidth, bgColor, height }: any,
             index: number
           ) => {
             return (
@@ -46,6 +46,7 @@ const {textColor}=useColorManager()
                 desc={description}
                 benefits={benefits}
                 logo={logo}
+                height={height}
                 logoWidth={logoWidth}
                 bgColor={useColorModeValue(bgColor, "gray.700")}
               />

@@ -12,7 +12,8 @@ export interface ICard {
   logo: any;
   benefits: any[];
   logoWidth?: string;
-  bgColor?: string
+  bgColor?: string;
+  height?: string;
 }
 
 const SuccessStoryCard = ({
@@ -22,6 +23,7 @@ const SuccessStoryCard = ({
   logo,
   logoWidth,
   bgColor,
+  height,
   ...rest
 }: ICard) => {
   const {darkOffWhite} = useColorManager();
@@ -37,7 +39,7 @@ const SuccessStoryCard = ({
       color={darkOffWhite}
       {...rest}
     >
-      <Image height="30px" src={logo} width={`${logoWidth}px`} alt="icon" />
+      <Image height={height || "30px"} src={logo} width={`${logoWidth}px`} alt="icon" />
       <Heading mt="15px" fontSize="24px">
         {title}
       </Heading>
