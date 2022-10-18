@@ -16,7 +16,6 @@ import useColorManager from "../hooks/useColorManager";
 import { CONTACT_INFO } from "../../../helpers/constant";
 
 const ContactUs = () => {
-
   const ContactHeading = () => {
     return (
       <>
@@ -56,7 +55,7 @@ const ContactUs = () => {
       flexDir={{ base: "column", md: "row" }}
       alignItems={{ base: "center", md: "flex-start" }}
     >
-      <Box w="40%">
+      <Box w={{ lg: "40%", md: "100%" }}>
         <Text
           fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
           fontWeight="bold"
@@ -66,29 +65,27 @@ const ContactUs = () => {
         </Text>
         <ContactHeading />
       </Box>
-      <Box w="60%" mt="5%">
+      <Box w={{ lg: "60%", md: "100%", sm: "100%" }} mt="5%">
         <Flex
           flexDir={{ base: "column", md: "column", lg: "row" }}
           gap={{ base: "1rem", lg: "2.5rem" }}
         >
-          <Flex align={"center"} gap={{ base: "7px", lg: "12px" }}>
+          <Flex
+            w={{ lg: "50%", md: "100%" }}
+            align={"center"}
+            gap={{ base: "7px", lg: "12px" }}
+          >
             <Icon as={FiUser} w={6} h={6} color="#fff" />
-            <Input
-              w={{ base: "300px", md: "450px", lg: "300px" }}
-              placeholder="Name"
-              size="lg"
-              color="#fff"
-            />
+            <Input placeholder="Name" size="lg" color="#fff" />
           </Flex>
 
-          <Flex align={"center"} gap={{ base: "7px", lg: "12px" }}>
+          <Flex
+            w={{ lg: "50%", md: "100%" }}
+            align={"center"}
+            gap={{ base: "7px", lg: "12px" }}
+          >
             <Icon as={FiMail} w={6} h={6} color="#fff" />
-            <Input
-              w={{ base: "300px", md: "450px", lg: "285px" }}
-              placeholder="Email"
-              size="lg"
-              color="#fff"
-            />
+            <Input placeholder="Email" size="lg" color="#fff" />
           </Flex>
         </Flex>
         <Flex
@@ -96,24 +93,22 @@ const ContactUs = () => {
           flexDir={{ base: "column", md: "column", lg: "row" }}
           gap={{ base: "1rem", lg: "2.5rem" }}
         >
-          <Flex align={"center"} gap={{ base: "7px", lg: "12px" }}>
+          <Flex
+            w={{ lg: "50%", md: "100%" }}
+            align={"center"}
+            gap={{ base: "7px", lg: "12px" }}
+          >
             <Icon as={FiGlobe} w={6} h={6} color="#fff" />
-            <Input
-              w={{ base: "300px", md: "450px", lg: "300px" }}
-              placeholder="Country"
-              size="lg"
-              color="#fff"
-            />
+            <Input placeholder="Country" size="lg" color="#fff" />
           </Flex>
 
-          <Flex align={"center"} gap={{ base: "7px", lg: "12px" }}>
+          <Flex
+            w={{ lg: "50%", md: "100%" }}
+            align={"center"}
+            gap={{ base: "7px", lg: "12px" }}
+          >
             <Icon as={FiPhoneCall} w={6} h={6} color="#fff" />
-            <Input
-              w={{ base: "300px", md: "450px", lg: "285px" }}
-              placeholder="Phone number"
-              size="lg"
-              color="#fff"
-            />
+            <Input placeholder="Phone number" size="lg" color="#fff" />
           </Flex>
         </Flex>
         <Flex mt="40px" gap={{ base: "7px", lg: "12px" }}>
@@ -127,7 +122,11 @@ const ContactUs = () => {
           />
         </Flex>
         <Flex justifyContent="center">
-          <Button mt="20px" colorScheme="blue" w="40%">
+          <Button
+            mt="20px"
+            colorScheme="blue"
+            w={{ lg: "40%", md: "100%", sm: "80%" }}
+          >
             Send
           </Button>
         </Flex>
