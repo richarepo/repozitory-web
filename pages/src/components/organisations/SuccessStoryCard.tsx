@@ -42,10 +42,6 @@ const SuccessStoryCard = ({
         {title}
       </Heading>
       <Text mt={8} >{desc}</Text>
-      <Text mt={8} >{desc}</Text>
-      <Text fontWeight="bold" mt="5%" >
-        Read more...
-      </Text>
       <Text mt="10%" mb="2%" >
         Results
       </Text>
