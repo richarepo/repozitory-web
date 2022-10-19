@@ -6,6 +6,9 @@ import { BiPhoneCall } from "react-icons/bi";
 import { SiGooglemaps } from "react-icons/si";
 import { AiOutlineFieldTime } from "react-icons/ai";
 import { ChatIcon, CheckCircleIcon, SunIcon, TimeIcon, ViewIcon } from "@chakra-ui/icons";
+import two from '../assets/career/two.png'
+import bday from '../assets/career/bday.png'
+import three from '../assets/career/three.png'
 
 export const SERVER_URL = "http://localhost:8000";
 
@@ -148,4 +151,23 @@ export const ALL_REPOZITORY_WAYS: any = [
     iconBg: '#eef9f2',
     iconColor: '#96e1c2'
   }
+]
+
+
+export const CAREER_INFO = [
+{
+    images: two,
+    heading: "LOREM IPSUM",
+    subheading: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which",
+  },
+{
+    images: three,
+    heading: "LOREM IPSUM",
+    subheading: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which",
+  },
+{
+    images: bday,
+    heading: "LOREM IPSUM",
+    subheading: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which",
+  },
 ]

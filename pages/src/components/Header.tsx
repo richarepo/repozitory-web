@@ -274,6 +274,6 @@ const NAV_ITEMS: Array<NavItem> = [
   },
   {
     label: "Careers",
-    href: "#",
+    href: "/careers",
   },
 ];
