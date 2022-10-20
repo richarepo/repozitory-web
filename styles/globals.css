@@ -359,3 +359,27 @@ a {
 .detail-section .side#deatilside1 {
   clip-path: polygon(100% 0, 50% 0, 50% 100%, 100% 100%);
 }
+
+.mobile-section .side {
+  z-index: 7;
+}
+
+.mobile-section .side#mobileAppSide2 {
+  clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
+}
+
+.mobile-section .side#mobileAppSide1 {
+  clip-path: polygon(100% 0, 50% 0, 50% 100%, 100% 100%);
+}
+
+.ui-ux-section .side {
+  z-index: 6;
+}
+
+.ui-ux-section .side#uiUxSide2 {
+  clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
+}
+
+.ui-ux-section .side#uiUxSide1 {
+  clip-path: polygon(100% 0, 50% 0, 50% 100%, 100% 100%);
+}
