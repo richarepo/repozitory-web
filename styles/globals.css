@@ -215,7 +215,7 @@ a {
 }
 
 .way-of-works-div3 {
-  animation: comeFromBottom 3s ease-in-out 1; 
+  animation: comeFromBottom 3s ease-in-out 1;
 }
 
 .way-of-works-div2 {
@@ -275,32 +275,32 @@ a {
 }
 
 @keyframes comeFromTop {
-  0%{
+  0% {
     top: -200px;
   }
 
-  30%{
+  30% {
     top: 100px;
   }
 
-  60%{
+  60% {
     top: 30px;
   }
 
-  80%{
+  80% {
     top: 60px;
   }
 
-  90%{
+  90% {
     top: 55px;
   }
 
-  99%{
+  99% {
     top: 50px;
   }
 }
 
-.hero-animation-main-text{
+.hero-animation-main-text {
   animation: comeFromLeft 2s ease-in-out 1;
 }
 
@@ -316,4 +316,46 @@ a {
   99% {
     margin-left: 0px
   }
+}
+
+.side {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.animation-section .side{
+  z-index: 9;
+}
+
+.side .video{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+ 
+.animation-section .side#side2{
+  clip-path: polygon(0 0,0% 100%, 100% 100%);
+}
+
+.animation-section .side#side1 {
+  clip-path: polygon(0 0, 100% 100%, 100% 0);
+}
+
+
+.detail-section .side {
+  z-index: 8;
+}
+
+.detail-section .side#deatilside2 {
+  clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
+}
+
+.detail-section .side#deatilside1 {
+  clip-path: polygon(100% 0, 50% 0, 50% 100%, 100% 100%);
 }
