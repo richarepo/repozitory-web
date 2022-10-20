@@ -1,7 +1,7 @@
 /** @format */
 
 import { Box } from "@chakra-ui/react";
-import React from "react";
+import React from "react"; 
 
 const SplitAnimation = ({ sides, bgColor, children }: any) => {
   return !!sides && sides.length && sides.map((side: string, index: number) => {
