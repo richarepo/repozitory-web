@@ -30,7 +30,7 @@ export default function Header() {
   const { isOpen, onToggle } = useDisclosure();
   const {bgWtG}=useColorManager()
   return (
-    <Box>
+    <Box position="sticky" top="0px">
       <Flex
         bg={bgWtG}
         color={useColorModeValue("gray.600", "white")}
@@ -264,6 +264,10 @@ const NAV_ITEMS: Array<NavItem> = [
   //     },
   //   ],
   // },
+  {
+    label: "Services",
+    href: '/services'
+  },
   {
     label: "Blogs",
     href: "/blogs",
