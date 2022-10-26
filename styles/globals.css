@@ -383,3 +383,59 @@ a {
 .ui-ux-section .side#uiUxSide1 {
   clip-path: polygon(100% 0, 50% 0, 50% 100%, 100% 100%);
 }
+
+.hero-section-main-image{
+  width: 80%;
+  position: absolute;
+  top: -20px;
+  right: -25%;
+}
+
+@media screen and (max-width: 768px) {
+  .hero-main-section{
+    flex-direction: column-reverse;
+    min-height: 0vh;
+  }
+  .animation-main-section{
+    margin-left: -22%;
+    margin-bottom: 20%;
+    margin-top: 10%;
+  }
+
+  .specification{
+    margin-top: 3% !important;
+  }
+
+  .list-container{
+    margin-left: -3%;
+  }
+
+  .hero-section-main-image{
+    position: inherit;
+  }
+}
+
+@media screen and (max-width: 468px) {
+  .hero-main-section {
+    flex-direction: column-reverse;
+    min-height: 0vh;
+  }
+
+  .animation-main-section {
+    margin-left: -5%;
+    margin-bottom: 30%;
+    margin-top: 10%;
+  }
+
+  .specification {
+    margin-top: 6% !important;
+  }
+
+  .list-container {
+    margin-left: -3%;
+  }
+
+  .hero-section-main-image {
+    position: inherit;
+  }
+}

@@ -3,7 +3,7 @@
 import React from "react";
 import { Box, Divider, Flex, Text, UnorderedList } from "@chakra-ui/react";
 import Image from "next/image";
-import SuperHeroImage from "../../../assets/section/superhero.webp";
+import DashboardImage from "../../../assets/section/Dashboard-02.png";
 import useColorManager from "../../../helpers/hooks/useColorManager";
 
 const fontStyle = { base: "3xl", md: "4xl", lg: "5xl" };
@@ -16,11 +16,13 @@ const specifications = [
 const Specification = () => {
    const {offWhite}=useColorManager()
   return (
-    <Flex mt="10%" >
+    <Flex className="specification" mt="10%">
       {specifications.map((specification, index) => {
         return (
           <Flex key={index}>
-            <Text as="span" color={offWhite}>{specification}</Text>{" "}
+            <Text as="span" color={offWhite}>
+              {specification}
+            </Text>{" "}
             {index + 1 < specifications.length && (
               <Divider orientation="vertical" mx="5px" borderColor={"black"} />
             )}
@@ -34,67 +36,58 @@ const Specification = () => {
 const HeroSection = () => {
   const {textColor}=useColorManager();
   return (
-    <Box h={"90vh"}>
-      <Flex
-        justifyContent="space-between"
-        flexDir={{ base: "column-reverse", md: "row" }}
+    <Box minH={"90vh"} className="hero-main-section" display="flex" alignItems="center">
+      <Box
+        pl="10%"
+        display="flex"
+        flexDirection="column"
+        justifyContent="center"
+        position="relative"
+        className="animation-main-section"
       >
-        <Box
-          pl="10%"
-          display="flex"
-          flexDirection="column"
-          justifyContent="center"
-          position="relative"
+        <Text
+          className="hero-animation-main-text"
+          fontSize={fontStyle}
+          fontWeight="bold"
+          color={textColor}
         >
+          Users Centric
+        </Text>
+        <Flex align="center" ml="-18px">
+          <Box className="list-container">
+            <UnorderedList
+              fontWeight="bold"
+              fontSize={fontStyle}
+              className="_list"
+            >
+              <Text color="red" className="item">
+                Performance
+              </Text>
+              <Text color="blue" className="item">
+                Scalability
+              </Text>
+              <Text color="green" className="item">
+                Reliability
+              </Text>
+              <Text color="brown" className="item">
+                Availability
+              </Text>
+            </UnorderedList>
+          </Box>
           <Text
-            className="hero-animation-main-text"
             fontSize={fontStyle}
             fontWeight="bold"
             color={textColor}
+            ml="10px"
           >
-            Users Centric
+            focused
           </Text>
-          <Flex align="center" ml="-18px">
-            <Box className="list-container">
-              <UnorderedList
-                fontWeight="bold"
-                fontSize={fontStyle}
-                className="_list"
-              >
-                <Text color="red" className="item">
-                  Performance
-                </Text>
-                <Text color="blue" className="item">
-                  Scalability
-                </Text>
-                <Text color="green" className="item">
-                  Reliability
-                </Text>
-                <Text color="brown" className="item">
-                  Availability
-                </Text>
-              </UnorderedList>
-            </Box>
-            <Text
-              fontSize={fontStyle}
-              fontWeight="bold"
-              color={textColor}
-              ml="10px"
-            >
-              focused
-            </Text>
-          </Flex>
-          <Specification />
-        </Box>
-        <Box height={{ base: "100%", sm: "70%", md: "50%" }}>
-          <Image
-            src={SuperHeroImage}
-            height="700"
-            width="600"
-            alt="superhero"
-          />
-        </Box>
-      </Flex>
+        </Flex>
+        <Specification />
+      </Box>
+      <Box className="hero-section-main-image">
+        <Image src={DashboardImage} />
+      </Box>
     </Box>
   );
 };
