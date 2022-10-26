@@ -16,6 +16,7 @@ const WhyOrganisation = () => {
         fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
         fontWeight="bold"
         color={textColor}
+        textAlign={"center"} 
       >
         Why Organizations{" "}
         <Text as="span" borderBottom="4px" borderColor="#ffae1a">
@@ -26,6 +27,7 @@ const WhyOrganisation = () => {
         color={textColor}
         mt={{ base: "10px", md: "0px" }}
         fontSize={{ base: "14px", md: "17px", lg: "20px" }}
+        textAlign={"center"}
       >
         Discover the many ways in which our clients have embraced the benefits
         of our way of engineering.
