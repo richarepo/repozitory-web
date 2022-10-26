@@ -2,11 +2,11 @@ import { Box, Flex, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import React from "react";
 import SplitAnimation from "./SplitAnimation";
-import appDevelopment from "../../../assets/service/appDevelopment.png";
-import useAttachEvent from "../../../helpers/hooks/useAttachEvent";
+import appDevelopment from "../../../../assets/service/appDevelopment.png";
+import useAttachEvent from "../../../../helpers/hooks/useAttachEvent";
 
 const MobileDevelopmentService = () => {
-  useAttachEvent("mobileAppSide1", "mobileAppSide2", 3000);
+  useAttachEvent("mobileAppSide1", "mobileAppSide2", 4500);
   return (
     <Box position="initial" className="mobile-section">
       <SplitAnimation
@@ -24,8 +24,8 @@ const MobileDevelopmentService = () => {
           <Image
             src={appDevelopment}
             alt="appDevelopment.png"
-            width={719}
-            height={700}
+            width={575}
+            height={650}
           />
           <Flex
             w={"50%"}

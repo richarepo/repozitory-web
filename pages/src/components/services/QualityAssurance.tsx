@@ -1,7 +1,7 @@
 import { Box, Flex, Text } from '@chakra-ui/react';
 import Image from 'next/image';
 import React from 'react'
-import qualityAssurance from '../../../assets/service/qualityAssurance.png'
+import qualityAssurance from '../../../../assets/service/qualityAssurance.png'
 
 const QualityAssurance = () => {
   return (
@@ -14,7 +14,7 @@ const QualityAssurance = () => {
           minH="93vh"
           color={"gray.900"}
         >
-          <Image src={qualityAssurance} alt="qualityAssurance.png" width={719} height={700} />
+          <Image src={qualityAssurance} alt="qualityAssurance.png" width={575} height={650} />
           <Flex
             w={"50%"}
             flexDir={"column"}

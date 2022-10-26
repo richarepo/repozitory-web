@@ -2,13 +2,13 @@
 
 import React from "react";
 import { Box, Flex, Text } from "@chakra-ui/react";
-import useAttachEvent from "../../../helpers/hooks/useAttachEvent";
+import useAttachEvent from "../../../../helpers/hooks/useAttachEvent";
 import SplitAnimation from "./SplitAnimation";
 import Image from "next/image";
-import webDevelopment from '../../../assets/service/webDevelopment.png'
+import webDevelopment from '../../../../assets/service/webDevelopment.png'
 
-const ComanyService = () => {
-  useAttachEvent("deatilside1", "deatilside2", 1500);
+const CompanyService = () => {
+  useAttachEvent("deatilside1", "deatilside2", 3200);
 
   return (
     <Box position="initial" className="detail-section">
@@ -21,7 +21,6 @@ const ComanyService = () => {
           display="flex"
           flexDirection="row"
           alignItems="center"
-          // justifyContent="center"
           minH="93vh"
           color={"gray.900"}
         >
@@ -31,22 +30,22 @@ const ComanyService = () => {
             alignItems={"left"}
             p={"2rem 2rem"}
           >
-            <Text color={"orange.400"} fontSize="60px" fontWeight="bold" lineHeight="60px" maxWidth={"70%"}>
+            <Text color={"orange.400"} fontSize={{base:"30px",md:"45px",lg:"60px"}} fontWeight="bold" lineHeight={{base:"30px",md:"45px",lg:"60px"}} maxWidth={"70%"}>
               WEB DEVELOPMENT
             </Text>
 
-            <Text fontSize="25px" lineHeight={'taller'}>
+            <Text fontSize={{base:"18px",lg:"25px" }} lineHeight={{base:"30px",md:"45px",lg:'taller'}}>
               Mobile app development services are incomplete if your app is not
               responsive and web-enabled. We customise solutions to work
               seamlessly on multiple platforms and provide a consistent,
               dazzling experience to users regardless of the device.
             </Text>
           </Flex>
-          <Image src={webDevelopment} alt="webDevelopment.png" width={718} height={700} />
+          <Image src={webDevelopment} alt="webDevelopment.png" width={575} height={650} />
         </Flex>
       </SplitAnimation>
     </Box>
   );
 };
 
-export default ComanyService;
+export default CompanyService;

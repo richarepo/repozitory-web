@@ -29,8 +29,9 @@ import useColorManager from "../../../helpers/hooks/useColorManager";
 export default function Header() {
   const { isOpen, onToggle } = useDisclosure();
   const {bgWtG}=useColorManager()
+
   return (
-    <Box position="sticky" top="0px">
+    <Box position="sticky" top="0px" zIndex={"999999"}>
       <Flex
         bg={bgWtG}
         color={useColorModeValue("gray.600", "white")}
@@ -77,8 +78,9 @@ const DesktopNav = () => {
   const popoverContentBgColor = useColorModeValue("white", "gray.800");
    const {bgWtG}=useColorManager()
 
+
   return (
-    <Stack direction={"row"} spacing={4} alignItems={"center"} bgColor={bgWtG}>
+    <Stack direction={"row"} spacing={4} alignItems={"center"} bgColor={bgWtG} >
       {NAV_ITEMS.map((navItem) => (
         <Box key={navItem.label}>
           <Popover trigger={"hover"} placement={"bottom-start"}>
@@ -266,18 +268,18 @@ const NAV_ITEMS: Array<NavItem> = [
   // },
   {
     label: "Services",
-    href: '/services'
+    href: '/#services'
   },
   {
     label: "Blogs",
-    href: "/blogs",
+    href: "/blog",
   },
   {
     label: "Contact us",
-    href: "#contact_us",
+    href: "/#contact_us",
   },
   {
     label: "Careers",
-    href: "/careers",
+    href: "/#careers",
   },
 ];

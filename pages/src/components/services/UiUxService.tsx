@@ -1,12 +1,12 @@
 import { Box, Flex, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import React from "react";
-import useAttachEvent from "../../../helpers/hooks/useAttachEvent";
+import useAttachEvent from "../../../../helpers/hooks/useAttachEvent";
 import SplitAnimation from "./SplitAnimation";
-import uiUx from "../../../assets/service/uiUx.png";
+import uiUx from "../../../../assets/service/uiUx.png";
 
 const UiUxService = () => {
-  useAttachEvent("uiUxSide1", "uiUxSide2", 4500);
+  useAttachEvent("uiUxSide1", "uiUxSide2", 6000);
   return (
     <Box position="initial" className="ui-ux-section">
       <SplitAnimation sides={["uiUxSide1", "uiUxSide2"]} bgColor={"#fff"}>
@@ -40,7 +40,7 @@ const UiUxService = () => {
               dazzling experience to users regardless of the device.
             </Text>
           </Flex>
-          <Image src={uiUx} alt="uiUx.png" width={719} height={700} />
+          <Image src={uiUx} alt="uiUx.png" width={575} height={650} />
         </Flex>
       </SplitAnimation>
     </Box>
