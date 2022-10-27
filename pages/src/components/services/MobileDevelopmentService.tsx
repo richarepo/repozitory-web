@@ -24,8 +24,7 @@ const MobileDevelopmentService = () => {
           <Image
             src={appDevelopment}
             alt="appDevelopment.png"
-            width={575}
-            height={650}
+            width={520} height={650}
           />
           <Flex
             w={"50%"}
@@ -36,14 +35,14 @@ const MobileDevelopmentService = () => {
           >
             <Text
               color={"orange.400"}
-              fontSize="60px"
+              fontSize={{base:"px",md:"35px",lg:"40px"}}
+              lineHeight={{base:"30px",md:"45px",lg:"60px"}}
               fontWeight="bold"
-              lineHeight="60px"
             >
               MOBILE APP DEVELOPMENT
             </Text>
 
-            <Text fontSize="25px" lineHeight={"taller"}>
+            <Text fontSize={{base:"18px",lg:"20px" }} lineHeight={{base:"30px",md:"45px",lg:"40PX"}}>
               Android, iOS and native apps with multi-platform compatibility and
               appealing UI/UX is our topmost mobile app development service. We
               identify the best choice for your project. We adapt fast and

@@ -21,12 +21,12 @@ export const CONTACT_INFO: any = [
     {
       heading: "Location",
       Icon: SiGooglemaps,
-      content: "Building no. 591, Sector-14 -125001, Hisar (Haryana)",
+      content: "H.no. 591, Sector-14 -125001, Hisar (Haryana)",
     },
     {
       heading: "Business Hours",
       Icon: AiOutlineFieldTime,
-      content: "Mon-Fri.....9 am-6 pm, Sat-Sun.....Closed",
+      content: "Mon-Fri...9 am-6 pm, Sat-Sun...Closed",
     },
   ];
 
