@@ -27,20 +27,22 @@ const UiUxService = () => {
           >
             <Text
               color={"orange.400"}
-              fontSize="60px" fontWeight="bold" lineHeight="60px"
+              fontSize={{ base: "px", md: "35px", lg: "40px" }}
+              lineHeight={{ base: "30px", md: "45px", lg: "60px" }}
+              fontWeight="bold" 
               maxWidth={"50%"}
             >
               UI/ UX DESIGN
             </Text>
 
-            <Text fontSize="25px" lineHeight={"taller"}>
+             <Text fontSize={{base:"18px",lg:"20px" }} lineHeight={{base:"30px",md:"45px",lg:"40PX"}}>
               Mobile app development services are incomplete if your app is not
               responsive and web-enabled. We customise solutions to work
               seamlessly on multiple platforms and provide a consistent,
               dazzling experience to users regardless of the device.
             </Text>
           </Flex>
-          <Image src={uiUx} alt="uiUx.png" width={575} height={650} />
+          <Image src={uiUx} alt="uiUx.png" width={520} height={650} />
         </Flex>
       </SplitAnimation>
     </Box>

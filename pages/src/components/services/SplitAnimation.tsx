@@ -9,8 +9,8 @@ const SplitAnimation = ({ sides, bgColor, children }: any) => {
       <Box
         key={index}
         bgColor={bgColor || "#FFDB58"}
-        minH="93vh"
-        className="side"
+        minH={{lg:"93vh"}}
+        className={"side"}
         id={side}
       >
         {children}

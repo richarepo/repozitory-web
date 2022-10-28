@@ -23,7 +23,7 @@ const Services = () => {
       </Text>
       <Controller>
         <Scene duration={6000} pin={{ pushFollowers: true }} offset={310}>
-          <Box position="relative">
+          <Box position={{lg:"relative"}}>
             <CompanyService />
             <MobileDevelopmentService />
             <UiUxService />
