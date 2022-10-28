@@ -86,7 +86,7 @@ const HeroSection = () => {
         <Specification />
       </Box>
       <Box className="hero-section-main-image">
-        <Image src={DashboardImage} />
+        <Image src={DashboardImage} alt="laptop-image" />
       </Box>
     </Box>
   );
