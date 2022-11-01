@@ -6,43 +6,49 @@ import useAttachEvent from "../../../../helpers/hooks/useAttachEvent";
 import SplitAnimation from "./SplitAnimation";
 import Image from "next/image";
 import webDevelopment from '../../../../assets/service/webDevelopment.png'
+import useColorManager from "../../../../helpers/hooks/useColorManager";
 
 const CompanyService = () => {
   useAttachEvent("deatilside1", "deatilside2", 3200);
+  const {offWhite,WHITE_LIGHT_GRAY}=useColorManager();
 
   return (
     <Box
       position={{ base: "inherit", lg: "initial" }}
       className="detail-section"
+       px="3%"
     >
       <SplitAnimation sides={["deatilside1", "deatilside2"]} bgColor={"#fff"}>
         <Flex
           className="video"
+          bgColor={WHITE_LIGHT_GRAY}
           display={{ base: "", lg: "flex" }}
           flexDirection={{ base: "column", lg: "row" }}
-          alignItems={{ lg: "center" }}
           minH="93vh"
           color={"gray.900"}
+          px="4rem"
         >
           <Flex
-            w={"50%"}
+            w={"50%"} 
             flexDir={{ lg: "column" }}
-            alignItems={{ lg: "left" }}
-            p={"2rem 2rem"}
-          >
+            alignItems={{ lg: "left" }}  
+            px="2rem"
+        >
             <Text
-              color={"orange.400"}
+              color={"blue"}
               fontWeight="bold"
-              fontSize={{ base: "px", md: "35px", lg: "40px" }}
+              fontSize={{ base: "25px", md: "30px", lg: "40px" }}
               lineHeight={{ base: "30px", md: "45px", lg: "60px" }}
-              maxWidth={"70%"}
+              maxWidth={"100%"}
             >
               WEB DEVELOPMENT
             </Text>
 
             <Text
               fontSize={{ base: "18px", lg: "20px" }}
-              lineHeight={{ base: "30px", md: "45px", lg: "40PX" }}
+              lineHeight={{ base: "25px", md: "30px", lg: "30px" }}
+              color={offWhite}
+              mt="1rem"
             >
               Mobile app development services are incomplete if your app is not
               responsive and web-enabled. We customise solutions to work
@@ -53,7 +59,7 @@ const CompanyService = () => {
           <Image
             src={webDevelopment}
             alt="webDevelopment.png"
-            width={520}
+            width={600}
             height={650}
           />
         </Flex>

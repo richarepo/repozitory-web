@@ -36,7 +36,7 @@ const Specification = () => {
 const HeroSection = () => {
   const {textColor}=useColorManager();
   return (
-    <Box minH={"90vh"} className="hero-main-section" display="flex" alignItems="center">
+    <Box minH={"90vh"} className="hero-main-section" display="flex" alignItems="center"> 
       <Box
         pl="10%"
         display="flex"

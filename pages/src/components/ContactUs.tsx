@@ -7,13 +7,13 @@ import {
   Input,
   Text,
   Textarea,
-  Icon,
-  Button,
+    Button,
   FormControl,
   FormLabel,
 } from "@chakra-ui/react";
 
 import { CONTACT_INFO, SERVER_URL } from "../../../helpers/constant";
+import useColorManager from "../../../helpers/hooks/useColorManager";
 
 const ContactUs = () => {
   const [name, setName] = useState("");
@@ -21,13 +21,14 @@ const ContactUs = () => {
   const [phone, setPhone] = useState("");
   const [country, setCountry] = useState("");
   const [message, setMessage] = useState("");
+  const {textColor,bgWtG,darkOffWhite}=useColorManager();
 
   const ContactHeading = () => {
     return (
       <>
         {CONTACT_INFO.map(({ heading, Icon, content }: any, index: any) => {
           return (
-            <Box key={index}>
+            <Box key={index} color={bgWtG}>
               <Flex alignItems={{ base: "center", lg: "flex-end" }} mt="10%">
                 <Box fontSize={{ base: "20px", lg: "30px" }}>
                   {" "}
@@ -37,20 +38,21 @@ const ContactUs = () => {
                   ml="5px"
                   fontSize={{ base: "20px", lg: "23px" }}
                   fontWeight="light"
-                  color="black"
+                  color={textColor}
                 >
                   {heading}
                 </Text>
               </Flex>
-              <Flex color={"black"} mt="3%">
+              <Flex color={darkOffWhite} mt="3%">
                 <Text>{content}</Text>
               </Flex>
             </Box>
           );
         })}
       </>
-    );
+    )
   };
+ 
 
   const handleSubmit = async (event: any) => {
     const response = await fetch(`${SERVER_URL}/api/contact`, {
@@ -69,9 +71,10 @@ const ContactUs = () => {
     const data = await response.json();
   };
 
+
   return (
     <Box
-      bgColor={"#fff"}
+      bgColor={bgWtG}
       p={"5%"}
       display="flex"
       flexDir={{ base: "column", md: "row" }}
@@ -82,9 +85,9 @@ const ContactUs = () => {
         <Text
           fontSize={{ base: "3xl", md: "4xl", lg: "4xl" }}
           fontWeight="bold"
-          color="black"
+          color={textColor}
         >
-          Reach recognition
+          Reach Us
         </Text>
         <ContactHeading />
       </Box>
@@ -94,7 +97,7 @@ const ContactUs = () => {
           pb={"2rem"}
           fontSize={{ base: "1xl", md: "2xl", lg: "4xl" }}
           fontWeight="bold"
-          color="black"
+          color={textColor}
         >
           Get in touch with us!
         </Text>
@@ -109,7 +112,7 @@ const ContactUs = () => {
               gap={{ base: "7px", lg: "12px" }}
             >
               <FormControl isRequired>
-                <FormLabel>Name</FormLabel>
+                <FormLabel color={darkOffWhite}>Name</FormLabel>
                 <Input
                   size="sm"
                   color="black"
@@ -127,7 +130,7 @@ const ContactUs = () => {
               gap={{ base: "7px", lg: "12px" }}
             >
               <FormControl isRequired>
-                <FormLabel>Email</FormLabel>
+                <FormLabel color={darkOffWhite}>Email</FormLabel>
                 <Input
                   type={"email"}
                   size="sm"
@@ -151,7 +154,7 @@ const ContactUs = () => {
               gap={{ base: "7px", lg: "12px" }}
             >
               <FormControl isRequired>
-                <FormLabel>Country</FormLabel>
+                <FormLabel color={darkOffWhite}>Country</FormLabel>
 
                 <Input
                   size="sm"
@@ -170,7 +173,7 @@ const ContactUs = () => {
               gap={{ base: "7px", lg: "12px" }}
             >
               <FormControl isRequired>
-                <FormLabel>Phone Number</FormLabel>
+                <FormLabel color={darkOffWhite}>Phone Number</FormLabel>
                 <Input
                   size="sm"
                   color="black"
@@ -185,16 +188,18 @@ const ContactUs = () => {
           </Flex>
           <Flex mt="40px" gap={{ base: "7px", lg: "12px" }}>
             <FormControl isRequired>
-              <FormLabel>Message</FormLabel>
+              <FormLabel color={darkOffWhite}>Message</FormLabel>
               <Textarea
                 size="sm"
                 resize={"vertical"}
                 rows={7}
+                maxLength={100}
                 color="black"
                 borderColor={"gray.400"}
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
               />
+               <Box float={"right"}>{message.length}/100</Box>
             </FormControl>
           </Flex>
           <Flex justifyContent="center">

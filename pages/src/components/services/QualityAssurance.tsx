@@ -2,39 +2,42 @@ import { Box, Flex, Text } from '@chakra-ui/react';
 import Image from 'next/image';
 import React from 'react'
 import qualityAssurance from '../../../../assets/service/qualityAssurance.png'
+import useColorManager from '../../../../helpers/hooks/useColorManager';
 
 const QualityAssurance = () => {
+const {offWhite}=useColorManager();
   return (
-    <Box position="initial" className="quality-section">
+    <Box position="initial" className="quality-section" px="3%">
         <Flex
           className="video"
           display="flex"
           flexDirection="row"
-          alignItems="center"
           minH="93vh"
           color={"gray.900"}
+          px="4rem"
         >
-          <Image src={qualityAssurance} alt="qualityAssurance.png" width={520} height={650} />
+          <Image src={qualityAssurance} alt="qualityAssurance.png" width={612} height={650} />
           <Flex
             w={"50%"}
             flexDir={"column"}
             alignItems={"flex-end"}
             textAlign={"right"}
-            p={"2rem 2rem"}
+            px="2rem"
           >
             <Text
-              color={"orange.400"}
-              fontSize={{ base: "px", md: "35px", lg: "40px" }}
+              color={"blue"}
+              fontSize={{ base: "25px", md: "30px", lg: "40px" }}
               lineHeight={{ base: "30px", md: "45px", lg: "60px" }}
               fontWeight="bold" 
-              maxWidth={"60%"}
             >
               QUALITY ASSURANCE
             </Text>
 
              <Text
               fontSize={{ base: "18px", lg: "20px" }}
-              lineHeight={{ base: "30px", md: "45px", lg: "40PX" }}
+              lineHeight={{ base: "25px", md: "30px", lg: "30px" }}
+              color={offWhite}
+              mt="1rem"
             >
               Quality testing of your solutions complete our mobile app
               development services suite. Iterative testing of web app, mobile

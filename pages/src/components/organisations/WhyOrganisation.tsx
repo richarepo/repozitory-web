@@ -11,7 +11,7 @@ const WhyOrganisation = () => {
   const { colorMode } = useColorMode();
   
   return (
-    <Box px="10%" my="4%" data-inviewport="scale-in">
+    <Box px="3%" my="4%" data-inviewport="scale-in">
       <Text
         fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
         fontWeight="bold"
@@ -19,7 +19,7 @@ const WhyOrganisation = () => {
         textAlign={"center"} 
       >
         Why Organizations{" "}
-        <Text as="span" borderBottom="4px" borderColor="#ffae1a">
+        <Text as="span" borderBottom="4px" borderColor="blue" pb="5px">
           Choose Repozitory
         </Text>
       </Text>
@@ -36,7 +36,7 @@ const WhyOrganisation = () => {
         mt="5%"
         px={{ base: "0%", md: "5%" }}
         templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)" }}
-        gap={6}
+        gap={12}
       >
         {WHY_ORGANISATION_OPTIONS.map(
           (

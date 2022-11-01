@@ -21,10 +21,20 @@ const WayOfWork = (props: { inViewport: boolean; forwardedRef: any }) => {
   return (
     <Box mb="13%">
       <Container mb="11%">
-        <Text fontSize="5xl" fontWeight="bold" color={textColor}>
-          The Repozitory Way
+        {/* <Text fontSize="5xl" fontWeight="bold" color={textColor}> */}
+        <Text
+          fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
+          fontWeight="bold"
+          color={textColor}
+          textAlign={"center"}
+        >
+          The{" "}
+          <Text as="span" borderBottom="4px" borderColor="blue" pb="5px">
+            Repozitory Way
+          </Text>
         </Text>
-        <Image src={SuperHeroImage} height="15vh" width="800" alt="superhero" />
+
+        {/* <Image src={SuperHeroImage} height="15vh" width="800" alt="superhero" /> */}
       </Container>
       <Flex justifyContent="space-between" align={"center"}>
         <Box display={{ base: "none", md: "block" }}>

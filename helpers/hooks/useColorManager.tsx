@@ -23,7 +23,8 @@ const color={
 }
 
 const useColorManager = () => {
-  const bgWtG  = useColorModeValue(color.WHITE, color.GRAY_700);
+  const bgWtG  = useColorModeValue(color.WHITE, color.GRAY_800);
+  const WHITE_LIGHT_GRAY=useColorModeValue(color.WHITE,"gray.800");
   const textColor= useColorModeValue(color.DARK_GRAY,color.TEXT_GRAY);
   const offWhite =useColorModeValue(color.BLACK,color.OFF_WHITE)
   const darkOffWhite=useColorModeValue(color.BLACK,color.DARK_OFF_WHITE)
@@ -33,9 +34,8 @@ const useColorManager = () => {
   const BLACK_DGRAY=useColorModeValue(color.DARK_CHARCOAL,color.DARK_GRAY)
   const LGRAY_DGRAY=useColorModeValue(color.GHOST_WHITE,color.GRAY_700)
   const LGRAY_BLACK=useColorModeValue(color.GHOST_WHITE,color.GRAY_800)
-  const WHITE_LGRAY=useColorModeValue(color.WHITE,color.GRAY_700);
   const BLACK_WHITE=useColorModeValue(color.BLACK,color.WHITE)
-  return { bgWtG,LGRAY_BLACK,textColor,offWhite ,darkOffWhite,darkBlue,blue,BLACK_GRAY,LGRAY_DGRAY,BLACK_DGRAY,WHITE_LGRAY,BLACK_WHITE};
+  return {WHITE_LIGHT_GRAY, bgWtG,LGRAY_BLACK,textColor,offWhite ,darkOffWhite,darkBlue,blue,BLACK_GRAY,LGRAY_DGRAY,BLACK_DGRAY,BLACK_WHITE};
 };
 
 export default useColorManager;
