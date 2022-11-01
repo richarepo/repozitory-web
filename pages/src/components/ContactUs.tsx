@@ -7,13 +7,13 @@ import {
   Input,
   Text,
   Textarea,
-  Icon,
-  Button,
+    Button,
   FormControl,
   FormLabel,
 } from "@chakra-ui/react";
 
 import { CONTACT_INFO, SERVER_URL } from "../../../helpers/constant";
+import useColorManager from "../../../helpers/hooks/useColorManager";
 
 const ContactUs = () => {
   const [name, setName] = useState("");
@@ -21,13 +21,14 @@ const ContactUs = () => {
   const [phone, setPhone] = useState("");
   const [country, setCountry] = useState("");
   const [message, setMessage] = useState("");
+  const {TEXT_COLOR,WHITE_TO_BLACK,DARK_OFF_WHITE,BLACK_WHITE}=useColorManager();
 
   const ContactHeading = () => {
     return (
       <>
         {CONTACT_INFO.map(({ heading, Icon, content }: any, index: any) => {
           return (
-            <Box key={index}>
+            <Box key={index} color={WHITE_TO_BLACK}>
               <Flex alignItems={{ base: "center", lg: "flex-end" }} mt="10%">
                 <Box fontSize={{ base: "20px", lg: "30px" }}>
                   {" "}
@@ -37,20 +38,21 @@ const ContactUs = () => {
                   ml="5px"
                   fontSize={{ base: "20px", lg: "23px" }}
                   fontWeight="light"
-                  color="black"
+                  color={TEXT_COLOR}
                 >
                   {heading}
                 </Text>
               </Flex>
-              <Flex color={"black"} mt="3%">
+              <Flex color={DARK_OFF_WHITE} mt="3%">
                 <Text>{content}</Text>
               </Flex>
             </Box>
           );
         })}
       </>
-    );
+    )
   };
+ 
 
   const handleSubmit = async (event: any) => {
     const response = await fetch(`${SERVER_URL}/api/contact`, {
@@ -69,9 +71,10 @@ const ContactUs = () => {
     const data = await response.json();
   };
 
+
   return (
     <Box
-      bgColor={"#fff"}
+      bgColor={WHITE_TO_BLACK}
       p={"5%"}
       display="flex"
       flexDir={{ base: "column", md: "row" }}
@@ -82,9 +85,9 @@ const ContactUs = () => {
         <Text
           fontSize={{ base: "3xl", md: "4xl", lg: "4xl" }}
           fontWeight="bold"
-          color="black"
+          color={TEXT_COLOR}
         >
-          Reach recognition
+          Reach Us
         </Text>
         <ContactHeading />
       </Box>
@@ -94,7 +97,7 @@ const ContactUs = () => {
           pb={"2rem"}
           fontSize={{ base: "1xl", md: "2xl", lg: "4xl" }}
           fontWeight="bold"
-          color="black"
+          color={TEXT_COLOR}
         >
           Get in touch with us!
         </Text>
@@ -109,10 +112,10 @@ const ContactUs = () => {
               gap={{ base: "7px", lg: "12px" }}
             >
               <FormControl isRequired>
-                <FormLabel>Name</FormLabel>
+                <FormLabel color={DARK_OFF_WHITE}>Name</FormLabel>
                 <Input
                   size="sm"
-                  color="black"
+                  color={BLACK_WHITE}
                   variant="flushed"
                   borderColor={"gray.400"}
                   value={name}
@@ -127,12 +130,12 @@ const ContactUs = () => {
               gap={{ base: "7px", lg: "12px" }}
             >
               <FormControl isRequired>
-                <FormLabel>Email</FormLabel>
+                <FormLabel color={DARK_OFF_WHITE}>Email</FormLabel>
                 <Input
                   type={"email"}
                   size="sm"
                   variant="flushed"
-                  color="black"
+                  color={BLACK_WHITE}
                   borderColor={"gray.400"}
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -151,11 +154,11 @@ const ContactUs = () => {
               gap={{ base: "7px", lg: "12px" }}
             >
               <FormControl isRequired>
-                <FormLabel>Country</FormLabel>
+                <FormLabel color={DARK_OFF_WHITE}>Country</FormLabel>
 
                 <Input
                   size="sm"
-                  color="black"
+                  color={BLACK_WHITE}
                   variant="flushed"
                   borderColor={"gray.400"}
                   value={country}
@@ -170,10 +173,10 @@ const ContactUs = () => {
               gap={{ base: "7px", lg: "12px" }}
             >
               <FormControl isRequired>
-                <FormLabel>Phone Number</FormLabel>
+                <FormLabel color={DARK_OFF_WHITE}>Phone Number</FormLabel>
                 <Input
                   size="sm"
-                  color="black"
+                  color={BLACK_WHITE}
                   variant="flushed"
                   borderColor={"gray.400"}
                   value={phone}
@@ -185,16 +188,18 @@ const ContactUs = () => {
           </Flex>
           <Flex mt="40px" gap={{ base: "7px", lg: "12px" }}>
             <FormControl isRequired>
-              <FormLabel>Message</FormLabel>
+              <FormLabel color={DARK_OFF_WHITE}>Message</FormLabel>
               <Textarea
                 size="sm"
                 resize={"vertical"}
                 rows={7}
-                color="black"
+                maxLength={100}
+                color={BLACK_WHITE}
                 borderColor={"gray.400"}
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
               />
+               <Box float={"right"}>{message.length}/100</Box>
             </FormControl>
           </Flex>
           <Flex justifyContent="center">

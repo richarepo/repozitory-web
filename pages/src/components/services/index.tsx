@@ -10,27 +10,38 @@ import QualityAssurance from "./QualityAssurance";
 import useColorManager from "../../../../helpers/hooks/useColorManager";
 
 const Services = () => {
-    const { textColor } = useColorManager();
+  const { TEXT_COLOR, WHITE_LIGHT_GRAY } = useColorManager();
   return (
-    <Box id="services" px="10%" my="6%" data-inviewport="scale-in">
+    <Box
+      id="services"
+      px="3%"
+      my="6%"
+      data-inviewport="scale-in"
+      bgColor={WHITE_LIGHT_GRAY}
+    >
       <Text
         fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
         fontWeight="bold"
-        color={textColor}
+        color={TEXT_COLOR}
         textAlign={"center"}
       >
-        What we do..
+        What Are We{" "}
+        <Text as="span" borderBottom="4px" borderColor="blue" pb="5px">
+          Good At
+        </Text>
       </Text>
-      <Controller>
-        <Scene duration={6000} pin={{ pushFollowers: true }} offset={310}>
-          <Box position={{lg:"relative"}}>
-            <CompanyService />
-            <MobileDevelopmentService />
-            <UiUxService />
-            <QualityAssurance />
-          </Box>
-        </Scene>
-      </Controller>
+      <Box mt="5%">
+        <Controller>
+          <Scene duration={6000} pin={{ pushFollowers: true }} offset={310}>
+            <Box position={{ lg: "relative" }} bgColor={WHITE_LIGHT_GRAY}>
+              <CompanyService />
+              <MobileDevelopmentService />
+              <UiUxService />
+              <QualityAssurance />
+            </Box>
+          </Scene>
+        </Controller>
+      </Box>
     </Box>
   );
 };

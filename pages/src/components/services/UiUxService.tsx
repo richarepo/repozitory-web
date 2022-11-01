@@ -4,8 +4,10 @@ import React from "react";
 import useAttachEvent from "../../../../helpers/hooks/useAttachEvent";
 import SplitAnimation from "./SplitAnimation";
 import uiUx from "../../../../assets/service/uiUx.png";
+import useColorManager from "../../../../helpers/hooks/useColorManager";
 
 const UiUxService = () => {
+  const {OFF_WHITE}=useColorManager();
   useAttachEvent("uiUxSide1", "uiUxSide2", 6000);
   return (
     <Box position="initial" className="ui-ux-section">
@@ -14,35 +16,34 @@ const UiUxService = () => {
           className="video"
           display="flex"
           flexDirection="row"
-          alignItems="center"
           minH="93vh"
           color={"gray.900"}
+          px="4rem"
         >
           <Flex
             w={"50%"}
             flexDir={"column"}
             alignItems={"flex-start"}
             textAlign={"left"}
-            p={"2rem 2rem"}
+            px="2rem"
           >
             <Text
-              color={"orange.400"}
-              fontSize={{ base: "px", md: "35px", lg: "40px" }}
+              color={"blue"}
+              fontSize={{ base: "25px", md: "30px", lg: "40px" }}
               lineHeight={{ base: "30px", md: "45px", lg: "60px" }}
               fontWeight="bold" 
-              maxWidth={"50%"}
             >
               UI/ UX DESIGN
             </Text>
 
-             <Text fontSize={{base:"18px",lg:"20px" }} lineHeight={{base:"30px",md:"45px",lg:"40PX"}}>
+             <Text fontSize={{base:"18px",lg:"20px" }} lineHeight={{ base: "25px", md: "30px", lg: "30px" }} color={OFF_WHITE} mt="1rem">
               Mobile app development services are incomplete if your app is not
               responsive and web-enabled. We customise solutions to work
               seamlessly on multiple platforms and provide a consistent,
               dazzling experience to users regardless of the device.
             </Text>
           </Flex>
-          <Image src={uiUx} alt="uiUx.png" width={520} height={650} />
+          <Image src={uiUx} alt="uiUx.png" width={612} height={650} />
         </Flex>
       </SplitAnimation>
     </Box>

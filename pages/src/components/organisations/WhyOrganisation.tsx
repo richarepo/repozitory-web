@@ -7,24 +7,24 @@ import SuccessStoryCard from "./SuccessStoryCard";
 import useColorManager from "../../../../helpers/hooks/useColorManager";
 
 const WhyOrganisation = () => {
-  const { textColor } = useColorManager();
+  const { TEXT_COLOR } = useColorManager();
   const { colorMode } = useColorMode();
   
   return (
-    <Box px="10%" my="4%" data-inviewport="scale-in">
+    <Box px="3%" my="4%" data-inviewport="scale-in">
       <Text
         fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
         fontWeight="bold"
-        color={textColor}
+        color={TEXT_COLOR}
         textAlign={"center"} 
       >
         Why Organizations{" "}
-        <Text as="span" borderBottom="4px" borderColor="#ffae1a">
+        <Text as="span" borderBottom="4px" borderColor="blue" pb="5px">
           Choose Repozitory
         </Text>
       </Text>
       <Text
-        color={textColor}
+        color={TEXT_COLOR}
         mt={{ base: "10px", md: "0px" }}
         fontSize={{ base: "14px", md: "17px", lg: "20px" }}
         textAlign={"center"}
@@ -36,7 +36,7 @@ const WhyOrganisation = () => {
         mt="5%"
         px={{ base: "0%", md: "5%" }}
         templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)" }}
-        gap={6}
+        gap={12}
       >
         {WHY_ORGANISATION_OPTIONS.map(
           (

@@ -14,13 +14,13 @@ const specifications = [
 ];
 
 const Specification = () => {
-   const {offWhite}=useColorManager()
+   const {OFF_WHITE}=useColorManager()
   return (
     <Flex className="specification" mt="10%">
       {specifications.map((specification, index) => {
         return (
           <Flex key={index}>
-            <Text as="span" color={offWhite}>
+            <Text as="span" color={OFF_WHITE}>
               {specification}
             </Text>{" "}
             {index + 1 < specifications.length && (
@@ -34,9 +34,9 @@ const Specification = () => {
 };
 
 const HeroSection = () => {
-  const {textColor}=useColorManager();
+  const {TEXT_COLOR}=useColorManager();
   return (
-    <Box minH={"90vh"} className="hero-main-section" display="flex" alignItems="center">
+    <Box minH={"90vh"} className="hero-main-section" display="flex" alignItems="center"> 
       <Box
         pl="10%"
         display="flex"
@@ -49,7 +49,7 @@ const HeroSection = () => {
           className="hero-animation-main-text"
           fontSize={fontStyle}
           fontWeight="bold"
-          color={textColor}
+          color={TEXT_COLOR}
         >
           Users Centric
         </Text>
@@ -77,7 +77,7 @@ const HeroSection = () => {
           <Text
             fontSize={fontStyle}
             fontWeight="bold"
-            color={textColor}
+            color={TEXT_COLOR}
             ml="10px"
           >
             focused
