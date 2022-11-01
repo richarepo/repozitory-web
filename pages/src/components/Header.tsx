@@ -28,12 +28,12 @@ import useColorManager from "../../../helpers/hooks/useColorManager";
 
 export default function Header() {
   const { isOpen, onToggle } = useDisclosure();
-  const {bgWtG}=useColorManager()
+  const {WHITE_TO_BLACK}=useColorManager()
 
   return (
     <Box position="sticky" top="0px" zIndex={"999999"}>
       <Flex
-        bg={bgWtG}
+        bg={WHITE_TO_BLACK}
         color={useColorModeValue("gray.600", "white")}
         minH={"60px"}
         py={{ base: 2 }}
@@ -76,11 +76,11 @@ const DesktopNav = () => {
   const linkColor = useColorModeValue("gray.600", "gray.200");
   const linkHoverColor = useColorModeValue("gray.800", "white");
   const popoverContentBgColor = useColorModeValue("white", "gray.800");
-   const {bgWtG}=useColorManager()
+   const {WHITE_TO_BLACK}=useColorManager()
 
 
   return (
-    <Stack direction={"row"} spacing={4} alignItems={"center"} bgColor={bgWtG} >
+    <Stack direction={"row"} spacing={4} alignItems={"center"} bgColor={WHITE_TO_BLACK} >
       {NAV_ITEMS.map((navItem) => (
         <Box key={navItem.label}>
           <Popover trigger={"hover"} placement={"bottom-start"}>

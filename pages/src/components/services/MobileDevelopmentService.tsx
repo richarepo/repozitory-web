@@ -7,7 +7,7 @@ import useAttachEvent from "../../../../helpers/hooks/useAttachEvent";
 import useColorManager from "../../../../helpers/hooks/useColorManager";
 
 const MobileDevelopmentService = () => {
-  const {offWhite}=useColorManager();
+  const {OFF_WHITE}=useColorManager();
   useAttachEvent("mobileAppSide1", "mobileAppSide2", 4500);
   return (
     <Box position="initial" className="mobile-section" px="3%">
@@ -43,7 +43,7 @@ const MobileDevelopmentService = () => {
               MOBILE APP DEVELOPMENT
             </Text>
 
-            <Text  pl="2rem" fontSize={{base:"18px",lg:"20px" }} lineHeight={{ base: "25px", md: "30px", lg: "30px" }} color={offWhite} mt="1rem">
+            <Text  pl="2rem" fontSize={{base:"18px",lg:"20px" }} lineHeight={{ base: "25px", md: "30px", lg: "30px" }} color={OFF_WHITE} mt="1rem">
               Android, iOS and native apps with multi-platform compatibility and
               appealing UI/UX is our topmost mobile app development service. We
               identify the best choice for your project. We adapt fast and

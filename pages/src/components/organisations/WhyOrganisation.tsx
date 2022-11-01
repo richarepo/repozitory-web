@@ -7,7 +7,7 @@ import SuccessStoryCard from "./SuccessStoryCard";
 import useColorManager from "../../../../helpers/hooks/useColorManager";
 
 const WhyOrganisation = () => {
-  const { textColor } = useColorManager();
+  const { TEXT_COLOR } = useColorManager();
   const { colorMode } = useColorMode();
   
   return (
@@ -15,7 +15,7 @@ const WhyOrganisation = () => {
       <Text
         fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
         fontWeight="bold"
-        color={textColor}
+        color={TEXT_COLOR}
         textAlign={"center"} 
       >
         Why Organizations{" "}
@@ -24,7 +24,7 @@ const WhyOrganisation = () => {
         </Text>
       </Text>
       <Text
-        color={textColor}
+        color={TEXT_COLOR}
         mt={{ base: "10px", md: "0px" }}
         fontSize={{ base: "14px", md: "17px", lg: "20px" }}
         textAlign={"center"}

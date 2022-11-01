@@ -7,7 +7,7 @@ import uiUx from "../../../../assets/service/uiUx.png";
 import useColorManager from "../../../../helpers/hooks/useColorManager";
 
 const UiUxService = () => {
-  const {offWhite}=useColorManager();
+  const {OFF_WHITE}=useColorManager();
   useAttachEvent("uiUxSide1", "uiUxSide2", 6000);
   return (
     <Box position="initial" className="ui-ux-section">
@@ -36,7 +36,7 @@ const UiUxService = () => {
               UI/ UX DESIGN
             </Text>
 
-             <Text fontSize={{base:"18px",lg:"20px" }} lineHeight={{ base: "25px", md: "30px", lg: "30px" }} color={offWhite} mt="1rem">
+             <Text fontSize={{base:"18px",lg:"20px" }} lineHeight={{ base: "25px", md: "30px", lg: "30px" }} color={OFF_WHITE} mt="1rem">
               Mobile app development services are incomplete if your app is not
               responsive and web-enabled. We customise solutions to work
               seamlessly on multiple platforms and provide a consistent,

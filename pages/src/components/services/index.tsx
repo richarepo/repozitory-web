@@ -10,7 +10,7 @@ import QualityAssurance from "./QualityAssurance";
 import useColorManager from "../../../../helpers/hooks/useColorManager";
 
 const Services = () => {
-  const { textColor, WHITE_LIGHT_GRAY } = useColorManager();
+  const { TEXT_COLOR, WHITE_LIGHT_GRAY } = useColorManager();
   return (
     <Box
       id="services"
@@ -22,7 +22,7 @@ const Services = () => {
       <Text
         fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
         fontWeight="bold"
-        color={textColor}
+        color={TEXT_COLOR}
         textAlign={"center"}
       >
         What Are We{" "}

@@ -26,7 +26,7 @@ const SuccessStoryCard = ({
   height,
   ...rest
 }: ICard) => {
-  const {darkOffWhite} = useColorManager();
+  const {DARK_OFF_WHITE} = useColorManager();
   return (
     <Box
       className="hoverable-box"
@@ -36,7 +36,7 @@ const SuccessStoryCard = ({
       borderRadius={"12px"}
       backgroundColor={bgColor}
       cursor="pointer"
-      color={darkOffWhite}
+      color={DARK_OFF_WHITE}
       {...rest}
     >
       <Image height={height || "30px"} src={logo} width={`${logoWidth}px`} alt="icon" />

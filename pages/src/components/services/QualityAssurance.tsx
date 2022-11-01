@@ -5,7 +5,7 @@ import qualityAssurance from '../../../../assets/service/qualityAssurance.png'
 import useColorManager from '../../../../helpers/hooks/useColorManager';
 
 const QualityAssurance = () => {
-const {offWhite}=useColorManager();
+const {OFF_WHITE}=useColorManager();
   return (
     <Box position="initial" className="quality-section" px="3%">
         <Flex
@@ -36,7 +36,7 @@ const {offWhite}=useColorManager();
              <Text
               fontSize={{ base: "18px", lg: "20px" }}
               lineHeight={{ base: "25px", md: "30px", lg: "30px" }}
-              color={offWhite}
+              color={OFF_WHITE}
               mt="1rem"
             >
               Quality testing of your solutions complete our mobile app

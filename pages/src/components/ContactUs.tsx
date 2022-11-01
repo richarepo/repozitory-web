@@ -21,14 +21,14 @@ const ContactUs = () => {
   const [phone, setPhone] = useState("");
   const [country, setCountry] = useState("");
   const [message, setMessage] = useState("");
-  const {textColor,bgWtG,darkOffWhite}=useColorManager();
+  const {TEXT_COLOR,WHITE_TO_BLACK,DARK_OFF_WHITE,BLACK_WHITE}=useColorManager();
 
   const ContactHeading = () => {
     return (
       <>
         {CONTACT_INFO.map(({ heading, Icon, content }: any, index: any) => {
           return (
-            <Box key={index} color={bgWtG}>
+            <Box key={index} color={WHITE_TO_BLACK}>
               <Flex alignItems={{ base: "center", lg: "flex-end" }} mt="10%">
                 <Box fontSize={{ base: "20px", lg: "30px" }}>
                   {" "}
@@ -38,12 +38,12 @@ const ContactUs = () => {
                   ml="5px"
                   fontSize={{ base: "20px", lg: "23px" }}
                   fontWeight="light"
-                  color={textColor}
+                  color={TEXT_COLOR}
                 >
                   {heading}
                 </Text>
               </Flex>
-              <Flex color={darkOffWhite} mt="3%">
+              <Flex color={DARK_OFF_WHITE} mt="3%">
                 <Text>{content}</Text>
               </Flex>
             </Box>
@@ -74,7 +74,7 @@ const ContactUs = () => {
 
   return (
     <Box
-      bgColor={bgWtG}
+      bgColor={WHITE_TO_BLACK}
       p={"5%"}
       display="flex"
       flexDir={{ base: "column", md: "row" }}
@@ -85,7 +85,7 @@ const ContactUs = () => {
         <Text
           fontSize={{ base: "3xl", md: "4xl", lg: "4xl" }}
           fontWeight="bold"
-          color={textColor}
+          color={TEXT_COLOR}
         >
           Reach Us
         </Text>
@@ -97,7 +97,7 @@ const ContactUs = () => {
           pb={"2rem"}
           fontSize={{ base: "1xl", md: "2xl", lg: "4xl" }}
           fontWeight="bold"
-          color={textColor}
+          color={TEXT_COLOR}
         >
           Get in touch with us!
         </Text>
@@ -112,10 +112,10 @@ const ContactUs = () => {
               gap={{ base: "7px", lg: "12px" }}
             >
               <FormControl isRequired>
-                <FormLabel color={darkOffWhite}>Name</FormLabel>
+                <FormLabel color={DARK_OFF_WHITE}>Name</FormLabel>
                 <Input
                   size="sm"
-                  color="black"
+                  color={BLACK_WHITE}
                   variant="flushed"
                   borderColor={"gray.400"}
                   value={name}
@@ -130,12 +130,12 @@ const ContactUs = () => {
               gap={{ base: "7px", lg: "12px" }}
             >
               <FormControl isRequired>
-                <FormLabel color={darkOffWhite}>Email</FormLabel>
+                <FormLabel color={DARK_OFF_WHITE}>Email</FormLabel>
                 <Input
                   type={"email"}
                   size="sm"
                   variant="flushed"
-                  color="black"
+                  color={BLACK_WHITE}
                   borderColor={"gray.400"}
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -154,11 +154,11 @@ const ContactUs = () => {
               gap={{ base: "7px", lg: "12px" }}
             >
               <FormControl isRequired>
-                <FormLabel color={darkOffWhite}>Country</FormLabel>
+                <FormLabel color={DARK_OFF_WHITE}>Country</FormLabel>
 
                 <Input
                   size="sm"
-                  color="black"
+                  color={BLACK_WHITE}
                   variant="flushed"
                   borderColor={"gray.400"}
                   value={country}
@@ -173,10 +173,10 @@ const ContactUs = () => {
               gap={{ base: "7px", lg: "12px" }}
             >
               <FormControl isRequired>
-                <FormLabel color={darkOffWhite}>Phone Number</FormLabel>
+                <FormLabel color={DARK_OFF_WHITE}>Phone Number</FormLabel>
                 <Input
                   size="sm"
-                  color="black"
+                  color={BLACK_WHITE}
                   variant="flushed"
                   borderColor={"gray.400"}
                   value={phone}
@@ -188,13 +188,13 @@ const ContactUs = () => {
           </Flex>
           <Flex mt="40px" gap={{ base: "7px", lg: "12px" }}>
             <FormControl isRequired>
-              <FormLabel color={darkOffWhite}>Message</FormLabel>
+              <FormLabel color={DARK_OFF_WHITE}>Message</FormLabel>
               <Textarea
                 size="sm"
                 resize={"vertical"}
                 rows={7}
                 maxLength={100}
-                color="black"
+                color={BLACK_WHITE}
                 borderColor={"gray.400"}
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}

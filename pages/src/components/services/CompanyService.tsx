@@ -10,7 +10,7 @@ import useColorManager from "../../../../helpers/hooks/useColorManager";
 
 const CompanyService = () => {
   useAttachEvent("deatilside1", "deatilside2", 3200);
-  const {offWhite,WHITE_LIGHT_GRAY}=useColorManager();
+  const {OFF_WHITE}=useColorManager();
 
   return (
     <Box
@@ -21,7 +21,6 @@ const CompanyService = () => {
       <SplitAnimation sides={["deatilside1", "deatilside2"]} bgColor={"#fff"}>
         <Flex
           className="video"
-          bgColor={WHITE_LIGHT_GRAY}
           display={{ base: "", lg: "flex" }}
           flexDirection={{ base: "column", lg: "row" }}
           minH="93vh"
@@ -47,7 +46,7 @@ const CompanyService = () => {
             <Text
               fontSize={{ base: "18px", lg: "20px" }}
               lineHeight={{ base: "25px", md: "30px", lg: "30px" }}
-              color={offWhite}
+              color={OFF_WHITE}
               mt="1rem"
             >
               Mobile app development services are incomplete if your app is not

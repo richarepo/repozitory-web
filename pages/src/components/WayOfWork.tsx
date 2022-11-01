@@ -3,7 +3,6 @@
 import React from "react";
 import { Box, Container, Flex, Text } from "@chakra-ui/react";
 import Image from "next/image";
-import SuperHeroImage from "../../../assets/section/superhero.webp";
 import ProgrammerImage from "../../../assets/section/programmer2.png";
 import { ALL_REPOZITORY_WAYS } from "../../../helpers/constant";
 import handleViewport from "react-in-viewport";
@@ -16,16 +15,15 @@ const generateIcon = (data: any, iconBg: string) => {
 
 const WayOfWork = (props: { inViewport: boolean; forwardedRef: any }) => {
   const { inViewport, forwardedRef } = props;
-  const { textColor, bgWtG, offWhite, blue } = useColorManager();
+  const { TEXT_COLOR, WHITE_TO_BLACK, OFF_WHITE, BLUE } = useColorManager();
 
   return (
     <Box mb="13%">
       <Container mb="11%">
-        {/* <Text fontSize="5xl" fontWeight="bold" color={textColor}> */}
         <Text
           fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
           fontWeight="bold"
-          color={textColor}
+          color={TEXT_COLOR}
           textAlign={"center"}
         >
           The{" "}
@@ -34,7 +32,6 @@ const WayOfWork = (props: { inViewport: boolean; forwardedRef: any }) => {
           </Text>
         </Text>
 
-        {/* <Image src={SuperHeroImage} height="15vh" width="800" alt="superhero" /> */}
       </Container>
       <Flex justifyContent="space-between" align={"center"}>
         <Box display={{ base: "none", md: "block" }}>
@@ -46,7 +43,7 @@ const WayOfWork = (props: { inViewport: boolean; forwardedRef: any }) => {
           />
         </Box>
         <Box
-          bgColor={blue}
+          bgColor={BLUE}
           w={{ base: "100%", md: "68%" }}
           py={{ base: "5%" }}
           px={{ base: "3%" }}
@@ -71,7 +68,7 @@ const WayOfWork = (props: { inViewport: boolean; forwardedRef: any }) => {
                     mt={{ base: "3%" }}
                     ml={{ base: "15px" }}
                     borderRadius="15px"
-                    bgColor={bgWtG}
+                    bgColor={WHITE_TO_BLACK}
                     shadow="md"
                     position={{ md: "absolute" }}
                     display="flex"
@@ -95,7 +92,7 @@ const WayOfWork = (props: { inViewport: boolean; forwardedRef: any }) => {
                     >
                       {generateIcon(icon, iconColor)}
                     </Box>
-                    <Text align={"center"} mt={"20px"} color={offWhite}>
+                    <Text align={"center"} mt={"20px"} color={OFF_WHITE}>
                       {label}
                     </Text>
                   </Box>
