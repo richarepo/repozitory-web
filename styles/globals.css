@@ -202,12 +202,13 @@ a {
 
 
 .contact-background-image {
-  background-image: url('../assets/section/contact-bg.jpeg');
+  background-image: url('../assets/career/contact.jpg');
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-size: cover;
   padding: 5% 0%;
   box-sizing: border-box;
+  clip-path: polygon(0 22%, 100% 22%, 100% 100%, 0% 100%);
+  margin-top: -170px;
 }
 
 .way-of-works-div1 {

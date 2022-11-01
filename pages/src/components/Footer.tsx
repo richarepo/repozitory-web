@@ -16,6 +16,7 @@ import { FaFacebook, FaLinkedinIn } from 'react-icons/fa';
 import { BiMailSend } from 'react-icons/bi';
 import Image from 'next/image';
 import RepozitoryLogo from "../../../assets/logo/header_logo.png";
+import useColorManager from '../../../helpers/hooks/useColorManager';
 
 const SocialButton = ({
   children,
@@ -59,8 +60,9 @@ const ListHeader = ({ children }: { children: ReactNode }) => {
 };
 
 export default function Footer() {
+const {GRAY_GRAY_200,BLACKA_WHITEA}=useColorManager();
   return (
-    <Box color={useColorModeValue("gray.700", "gray.200")}>
+    <Box bgColor={GRAY_GRAY_200} color="#fff">
       <Container as={Stack} maxW={"6xl"} py={10}>
         <SimpleGrid
           templateColumns={{ sm: "1fr 1fr", md: "2fr 1fr 1fr 2fr" }}
@@ -105,14 +107,14 @@ export default function Footer() {
             <Stack direction={"row"}>
               <Input
                 placeholder={"Your email address"}
-                bg={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
+                bg={BLACKA_WHITEA}
                 border={0}
                 _focus={{
                   bg: "whiteAlpha.300",
                 }}
               />
               <IconButton
-                bg={useColorModeValue("blue.400", "blue.800")}
+                bg={BLACKA_WHITEA}
                 color={useColorModeValue("white", "gray.800")}
                 _hover={{
                   bg: "blue.600",

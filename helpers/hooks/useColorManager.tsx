@@ -5,10 +5,14 @@ const color = {
   WHITE: "#fff",
   OFF_WHITE: "#DAD2C5",
   DARK_OFF_WHITE: "#C6BEB1",
+  WHITE_ALPHA: "whiteAlpha.100",
 
   BLACK: "#000000",
+  BLACK_ALPHA: "blackAlpha.100",
 
+  GRAY_200: "gray.200",
   TEXT_GRAY: "gray.600",
+  GRAY_700: "gray.700",
   GRAY_800: "gray.800",
   DARK_GRAY: "gray.900",
 
@@ -19,7 +23,9 @@ const color = {
   AZURE: "#227bed",
 };
 
+
 const useColorManager = () => {
+  const BLACKA_WHITEA = useColorModeValue(color.BLACK_ALPHA,color.WHITE_ALPHA)
   const WHITE_TO_BLACK = useColorModeValue(color.WHITE, color.GRAY_800);
   const WHITE_LIGHT_GRAY = useColorModeValue(color.WHITE, color.GRAY_800);
   const TEXT_COLOR = useColorModeValue(color.DARK_GRAY, color.TEXT_GRAY);
@@ -28,6 +34,7 @@ const useColorManager = () => {
   const DARK_BLUE = useColorModeValue(color.BLUE_200, color.DARK_BLUE);
   const BLUE = useColorModeValue(color.AZURE, color.BLUE_700);
   const BLACK_WHITE = useColorModeValue(color.BLACK, color.WHITE);
+  const GRAY_GRAY_200 = useColorModeValue(color.GRAY_700, color.GRAY_800);
   return {
     WHITE_LIGHT_GRAY,
     WHITE_TO_BLACK,
@@ -37,6 +44,8 @@ const useColorManager = () => {
     DARK_BLUE,
     BLUE,
     BLACK_WHITE,
+    GRAY_GRAY_200,
+    BLACKA_WHITEA
   };
 };
 
