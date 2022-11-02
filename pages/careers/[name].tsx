@@ -32,13 +32,11 @@ const ApplyNow = () => {
   return (
     <Flex
       px={{base:"10px",lg: "10rem"}}
-      mt={{base:"1rem",md:"2.5rem",lg:"3rem"}}
+      mt={{base:"1rem",md:"2rem",lg:"2rem"}}
       mb="10rem"
-      flexDir="column"
-      align="center"
-      justify="center"
+      flexDir="column"   
     >
-      <Text fontSize={{base:"2xl",md:"2xl",lg:"3xl"}}  fontWeight={{base:"bold"}} mb={{base:"1rem",lg:"2rem"}} textAlign={"center"} color={TEXT_COLOR}>
+      <Text fontSize={{base:"2xl",md:"2xl",lg:"3xl"}}  fontWeight={{base:"bold"}} mb={{base:"1rem",lg:"2rem"}}  color="#316CB4">
         Apply for this position
       </Text>
       <Box w="70%">
@@ -101,11 +99,11 @@ const ApplyNow = () => {
             <input name="avatar" type="file" placeholder={"Profile picture"}/>
           </FormControl>
 
-          <Flex justifyContent="center">
+          <Flex>
             <Button
               type="submit"
-              mt="20px"
-              colorScheme="#316CB4"
+              mt="30px"
+              colorScheme="blue"
               w={{ lg: "40%", md: "100%", sm: "80%" }}
             >
               Apply
@@ -123,7 +121,7 @@ const JobField = () => {
   const { DARK_OFF_WHITE ,TEXT_COLOR} = useColorManager();
   return (
     <>
-      <Box px={{base:"2rem",lg:"10rem"}} mt="3rem" mb={{base:"5rem",lg:"10rem"}}>
+      <Box px={{base:"2rem",lg:"10rem"}} mt="3rem" mb={{base:"5rem",lg:"6rem"}}>
         <Heading as="h3" size="lg" color={TEXT_COLOR}>
           {name}
         </Heading>
