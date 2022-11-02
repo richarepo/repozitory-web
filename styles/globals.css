@@ -440,3 +440,18 @@ a {
     position: inherit;
   }
 }
+
+@media screen and (max-width: 768px) {
+
+  .contact-background-image {
+    height: auto;
+    background-image: url('../assets/career/contact.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 80%;
+    padding: 5% 0%;
+    box-sizing: border-box;
+    clip-path: polygon(0 22%, 100% 22%, 100% 100%, 0% 100%);
+    margin-top: -170px;
+  }
+
+}

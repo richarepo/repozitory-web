@@ -26,7 +26,7 @@ const Services = () => {
         textAlign={"center"}
       >
         What Are We{" "}
-        <Text as="span" borderBottom="4px" borderColor="blue" pb="5px">
+        <Text as="span" borderBottom="4px" borderColor="#316CB4" pb="5px">
           Good At
         </Text>
       </Text>

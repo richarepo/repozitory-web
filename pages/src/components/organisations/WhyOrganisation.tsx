@@ -19,7 +19,7 @@ const WhyOrganisation = () => {
         textAlign={"center"} 
       >
         Why Organizations{" "}
-        <Text as="span" borderBottom="4px" borderColor="blue" pb="5px">
+        <Text as="span" borderBottom="4px" borderColor="#316CB4" pb="5px">
           Choose Repozitory
         </Text>
       </Text>

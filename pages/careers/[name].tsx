@@ -23,7 +23,7 @@ const ApplyNow = () => {
   const [phone, setPhone] = useState("");
   const [cover, setCover] = useState("");
   
-  const { DARK_OFF_WHITE, BLACK_WHITE } = useColorManager();
+  const { DARK_OFF_WHITE, BLACK_WHITE ,TEXT_COLOR} = useColorManager();
 
   const handleSubmit = async (event: any) => {
     event.preventDefault()
@@ -31,16 +31,16 @@ const ApplyNow = () => {
 
   return (
     <Flex
-      px="10rem"
-      mt="3rem"
+      px={{base:"10px",lg: "10rem"}}
+      mt={{base:"1rem",md:"2.5rem",lg:"3rem"}}
       mb="10rem"
       flexDir="column"
       align="center"
       justify="center"
     >
-      <Heading mb="2rem" textAlign={"center"}>
+      <Text fontSize={{base:"2xl",md:"2xl",lg:"3xl"}}  fontWeight={{base:"bold"}} mb={{base:"1rem",lg:"2rem"}} textAlign={"center"} color={TEXT_COLOR}>
         Apply for this position
-      </Heading>
+      </Text>
       <Box w="70%">
         <form method="post" onSubmit={handleSubmit}>
           <FormControl isRequired>
@@ -105,7 +105,7 @@ const ApplyNow = () => {
             <Button
               type="submit"
               mt="20px"
-              colorScheme="blue"
+              colorScheme="#316CB4"
               w={{ lg: "40%", md: "100%", sm: "80%" }}
             >
               Apply
@@ -120,10 +120,11 @@ const ApplyNow = () => {
 const JobField = () => {
   const router = useRouter();
   const { name } = router.query;
+  const { DARK_OFF_WHITE ,TEXT_COLOR} = useColorManager();
   return (
     <>
-      <Box px="10rem" mt="3rem" mb="10rem">
-        <Heading as="h3" size="lg">
+      <Box px={{base:"2rem",lg:"10rem"}} mt="3rem" mb={{base:"5rem",lg:"10rem"}}>
+        <Heading as="h3" size="lg" color={TEXT_COLOR}>
           {name}
         </Heading>
         <Flex h="50px" align="center">
@@ -133,15 +134,15 @@ const JobField = () => {
           <Divider orientation="vertical" borderColor='black' height={'20px'} mx={"10px"}/>
           <Text>CTC- 3-6 lakhs p.a.</Text>
         </Flex>
-        <Text mt="15px" fontSize="18px" w="80%">
+        <Text mt="15px" fontSize="18px" w="80%" color={DARK_OFF_WHITE}>
           We are looking for Software developers at Repozitory Technologies Pvt
           Ltd, Hisar. Your primary focus will be developing user-facing web
           applications and configuring existing components.
         </Text>
-        <Heading as="h3" size="lg" mt="2rem">
+        <Heading as="h3" size="lg" mt="2rem" color={TEXT_COLOR}>
           Required Skills
         </Heading>
-        <UnorderedList mt="2rem" fontSize="18px" w="80%">
+        <UnorderedList mt="2rem" fontSize="18px" w="80%" color={DARK_OFF_WHITE}>
           <ListItem>
             B.Tech. / M.Tech. in CS or IT / MCA Freshers - 2021/2022 passed out.
             At least 60% marks throughout the academics.
@@ -160,11 +161,11 @@ const JobField = () => {
           </ListItem>
           <ListItem> Must be able to relocate to Hisar. </ListItem>
         </UnorderedList>
-        <Heading as="h3" size="lg" mt="2rem">
-          {" "}
-          Selection process{" "}
+        <Heading as="h3" size="lg" mt="2rem" color={TEXT_COLOR}>
+          
+          Selection process
         </Heading>
-        <OrderedList mt="2rem" fontSize="18px" w="80%">
+        <OrderedList mt={{base:"1rem",lg:"2rem"}} fontSize="18px" w="80%" color={DARK_OFF_WHITE}>
           <ListItem> Programming Test</ListItem>
           <ListItem> Personal interview (Round 1 & Round 2) </ListItem>
         </OrderedList>
