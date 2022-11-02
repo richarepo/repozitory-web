@@ -32,7 +32,7 @@ const ContactUs = () => {
               <Flex alignItems={{ base: "center", lg: "flex-end" }} mt="10%">
                 <Box fontSize={{ base: "20px", lg: "30px" }}>
                   {" "}
-                  <Icon color="#227bed" />
+                  <Icon color="#316CB4" />
                 </Box>
                 <Text
                   ml="5px"

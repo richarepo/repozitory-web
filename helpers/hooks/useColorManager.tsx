@@ -10,6 +10,7 @@ const color = {
   BLACK: "#000000",
   BLACK_ALPHA: "blackAlpha.100",
 
+  GRAY_100:"gray.100",
   GRAY_200: "gray.200",
   TEXT_GRAY: "gray.600",
   GRAY_700: "gray.700",
@@ -21,12 +22,12 @@ const color = {
   DARK_BLUE: "blue.800",
 
   AZURE: "#227bed",
-};
-
+}
 
 const useColorManager = () => {
+  const GRAYL_GRAYD = useColorModeValue(color.GRAY_100,color.GRAY_700)
   const BLACKA_WHITEA = useColorModeValue(color.BLACK_ALPHA,color.WHITE_ALPHA)
-  const WHITE_TO_BLACK = useColorModeValue(color.WHITE, color.GRAY_800);
+  const WHITE_TO_BLACK = useColorModeValue(color.WHITE, color.GRAY_700);
   const WHITE_LIGHT_GRAY = useColorModeValue(color.WHITE, color.GRAY_800);
   const TEXT_COLOR = useColorModeValue(color.DARK_GRAY, color.TEXT_GRAY);
   const OFF_WHITE = useColorModeValue(color.BLACK, color.OFF_WHITE);
@@ -35,6 +36,7 @@ const useColorManager = () => {
   const BLUE = useColorModeValue(color.AZURE, color.BLUE_700);
   const BLACK_WHITE = useColorModeValue(color.BLACK, color.WHITE);
   const GRAY_GRAY_200 = useColorModeValue(color.GRAY_700, color.GRAY_800);
+
   return {
     WHITE_LIGHT_GRAY,
     WHITE_TO_BLACK,
@@ -45,8 +47,10 @@ const useColorManager = () => {
     BLUE,
     BLACK_WHITE,
     GRAY_GRAY_200,
-    BLACKA_WHITEA
+    BLACKA_WHITEA,
+    GRAYL_GRAYD
   };
+
 };
 
 export default useColorManager;

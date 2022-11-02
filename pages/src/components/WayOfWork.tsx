@@ -15,7 +15,7 @@ const generateIcon = (data: any, iconBg: string) => {
 
 const WayOfWork = (props: { inViewport: boolean; forwardedRef: any }) => {
   const { inViewport, forwardedRef } = props;
-  const { TEXT_COLOR, WHITE_TO_BLACK, OFF_WHITE, BLUE } = useColorManager();
+  const { TEXT_COLOR, WHITE_TO_BLACK, OFF_WHITE } = useColorManager();
 
   return (
     <Box mb="13%">
@@ -27,7 +27,7 @@ const WayOfWork = (props: { inViewport: boolean; forwardedRef: any }) => {
           textAlign={"center"}
         >
           The{" "}
-          <Text as="span" borderBottom="4px" borderColor="blue" pb="5px">
+          <Text as="span" borderBottom="4px" borderColor="#316CB4" pb="5px">
             Repozitory Way
           </Text>
         </Text>
@@ -43,7 +43,7 @@ const WayOfWork = (props: { inViewport: boolean; forwardedRef: any }) => {
           />
         </Box>
         <Box
-          bgColor={BLUE}
+          bgColor={"#316CB4"}
           w={{ base: "100%", md: "68%" }}
           py={{ base: "5%" }}
           px={{ base: "3%" }}

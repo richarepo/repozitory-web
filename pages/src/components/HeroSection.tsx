@@ -63,7 +63,7 @@ const HeroSection = () => {
               <Text color="red" className="item">
                 Performance
               </Text>
-              <Text color="blue" className="item">
+              <Text color="#316CB4" className="item">
                 Scalability
               </Text>
               <Text color="green" className="item">

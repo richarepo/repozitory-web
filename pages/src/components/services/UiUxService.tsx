@@ -28,12 +28,12 @@ const UiUxService = () => {
             px="2rem"
           >
             <Text
-              color={"blue"}
-              fontSize={{ base: "25px", md: "30px", lg: "40px" }}
+              color={"#316CB4"}
+              fontSize={{ base: "20px", md: "25px", lg: "30px" }}
               lineHeight={{ base: "30px", md: "45px", lg: "60px" }}
               fontWeight="bold" 
             >
-              UI/ UX DESIGN
+              UI/ UX Design
             </Text>
 
              <Text fontSize={{base:"18px",lg:"20px" }} lineHeight={{ base: "25px", md: "30px", lg: "30px" }} color={OFF_WHITE} mt="1rem">

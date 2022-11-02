@@ -34,13 +34,13 @@ const CompanyService = () => {
             px="2rem"
         >
             <Text
-              color={"blue"}
+              color={"#316CB4"}
               fontWeight="bold"
-              fontSize={{ base: "25px", md: "30px", lg: "40px" }}
+              fontSize={{ base: "20px", md: "25px", lg: "30px" }}
               lineHeight={{ base: "30px", md: "45px", lg: "60px" }}
               maxWidth={"100%"}
             >
-              WEB DEVELOPMENT
+              Web Development
             </Text>
 
             <Text
