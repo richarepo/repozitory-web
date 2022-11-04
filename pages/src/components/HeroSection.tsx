@@ -3,7 +3,7 @@
 import React from "react";
 import { Box, Divider, Flex, Text, UnorderedList } from "@chakra-ui/react";
 import Image from "next/image";
-import DashboardImage from "../../../assets/section/Dashboard-02.png";
+import DashboardImage from "../../../assets/section/Dashboard 3-03.png";
 import useColorManager from "../../../helpers/hooks/useColorManager";
 
 const fontStyle = { base: "3xl", md: "4xl", lg: "5xl" };

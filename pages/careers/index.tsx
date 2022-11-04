@@ -62,7 +62,7 @@ const {TEXT_COLOR}=useColorManager();
   return (
     <Box>
       <Box className="contact-background-image" h="100vh"/>
-      <Heading textAlign="center" mt={10} color={TEXT_COLOR}>
+      <Heading textAlign="center" mt={10} color={'#316CB4'}>
         Current Openings
       </Heading>
        <Jobs/>

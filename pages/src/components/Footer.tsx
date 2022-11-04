@@ -73,7 +73,7 @@ const {GRAY_GRAY_200,BLACKA_WHITEA}=useColorManager();
               <Image src={RepozitoryLogo} layout="intrinsic" alt="repozitory" />
             </Box>
             <Text fontSize={"sm"}>
-              © 2022 Repozitory technology. All rights reserved
+              © 2022 Repozitory technologies pvt. ltd. All rights reserved
             </Text>
             <Stack direction={"row"} spacing={6}>
               <SocialButton

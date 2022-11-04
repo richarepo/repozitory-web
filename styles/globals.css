@@ -447,7 +447,9 @@ a {
     height: auto;
     background-image: url('../assets/career/contact.jpg');
     background-repeat: no-repeat;
-    background-size: 100% 80%;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
     padding: 5% 0%;
     box-sizing: border-box;
     clip-path: polygon(0 22%, 100% 22%, 100% 100%, 0% 100%);
