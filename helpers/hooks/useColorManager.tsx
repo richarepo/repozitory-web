@@ -25,7 +25,7 @@ const color = {
 }
 
 const useColorManager = () => {
-  const GRAYL_GRAYD = useColorModeValue(color.GRAY_100,color.GRAY_700)
+  const GRAYL_GRAYD = useColorModeValue(color.WHITE,color.GRAY_700)
   const BLACKA_WHITEA = useColorModeValue(color.BLACK_ALPHA,color.WHITE_ALPHA)
   const WHITE_TO_BLACK = useColorModeValue(color.WHITE, color.GRAY_700);
   const WHITE_LIGHT_GRAY = useColorModeValue(color.WHITE, color.GRAY_800);

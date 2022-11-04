@@ -35,7 +35,7 @@ export const WHY_ORGANISATION_OPTIONS = [
     logo: GetStatusLogo,
     height: '40px',
     logoWidth: 120,
-    bgColor: '#b1e2bf',
+    bgColor: '#f6faf7',
     title: "Leading technology for project management in urban renewal.",
     description: "An urban renewal project is a complex and long project involving many professionals. To help you succeed in the long and complicated process, the Get Status technological system was developed. The system contributes efficiency and satisfaction of the apartment owners",
     benefits: [
@@ -52,7 +52,7 @@ export const WHY_ORGANISATION_OPTIONS = [
   {
     logo: EargoLogo,
     logoWidth: 130,
-    bgColor: '#b4c2e9',
+    bgColor: '#eaf5f5',
     title: "HEARING MADE SIMPLE.",
     description: "Eargo is a medical device company on a mission to improve hearing health. Our innovative product and go-to-market approach address the major challenges of traditional hearing aid adoption, including social stigma, accessibility and cost.",
     benefits: [
@@ -69,7 +69,7 @@ export const WHY_ORGANISATION_OPTIONS = [
   {
     logo: FidelixLogo,
     logoWidth: 110,
-    bgColor: '#ecccb7',
+    bgColor: '#f1f3f7',
     title: "Building Automation, Management and Security systems.",
     description: "The aim is to produce buildings with user-oriented digitalization and optimum conditions all the time, without any waste of energy and other resources. And always cost-effectively, too. Improves the customer experience and productivity and also makes life easier for property owners",
     benefits: [
@@ -86,7 +86,7 @@ export const WHY_ORGANISATION_OPTIONS = [
   {
     logo: SizeyLogo,
     logoWidth: 110,
-    bgColor: '#eadab8',
+    bgColor: '#f7f5f1',
     title: "The world's most accurate size recommendation tool for fashion e-ecommerce.",
     description: "MySizey creates a seamless shopping experience by offering automated size recommendations and a virtual fitting room that allows shoppers to try on clothes in the comfort of their own homes.MySizey is a web-based plugin that integrates with fashion ecommerce sites to generate automatic sizing recommendations for shoppers based on their profile.",
     benefits: [
