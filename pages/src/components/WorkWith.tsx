@@ -4,7 +4,7 @@ import { Box, Text } from '@chakra-ui/react';
 
 import SizeyLogo from "../../../assets/logo/sizey.png";
 import EargoLogo from "../../../assets/logo/eargo.png";
-import FidlixLogo from "../../../assets/logo/fidlix.png";
+import FidlixLogo from "../../../assets/logo/Fidlix.png";
 import GetStatusLogo from "../../../assets/logo/get_status.png";
 import useColorManager from '../../../helpers/hooks/useColorManager';
 
@@ -26,7 +26,7 @@ const WorkWith = () => {
                 alignItems={{ base: "center", md: "center", lg: "flex-start" }}
             >
                 <Text
-                    color={BLUE}
+                    color={"#013878"}
                     fontWeight="bold"
                     lineHeight={"54px"}
                     letterSpacing={"-0.04em"}
@@ -34,7 +34,7 @@ const WorkWith = () => {
                     fontSize={{ base: "25px", md: "4xl", lg: "5xl" }}
                     padding={{ base: "20px 0px", md: "20px 0px", lg: "0px" }}
                 >
-                    We Work With
+                    Who Trust Us?
                 </Text>
                 <Text>STARTUPS & ENTERPRISES</Text>
             </Box>

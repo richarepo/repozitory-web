@@ -89,9 +89,9 @@ function HeroSection() {
           >
             Transforming ideas into reality with cutting-edge web and mobile apps.
           </Text>
-          <Box display={"flex"} color={BLUE} alignItems={"center"}>
+          {/* <Box display={"flex"} color={BLUE} alignItems={"center"}>
             <Text marginRight={"10px"} fontSize={"14px"}>DISCOVER MORE </Text> <ArrowForwardIcon />
-          </Box>
+          </Box> */}
 
           {/* <Image
             color={BLUE}
@@ -108,10 +108,10 @@ function HeroSection() {
           />
         </Box>
       </Flex>
-      <Box display={"flex"} justifyContent={"center"} mt={"5%"} mb={"5%"}><SubHeroSection /></Box>
-      <Box display={"flex"} justifyContent={"center"} mt={"5%"} mb={"5%"}><IdeaExecute /></Box>
-      <Box display={"flex"} justifyContent={"center"} mt={"5%"} mb={"5%"}><WorkWith /></Box>
       <Box display={"flex"} justifyContent={"center"} mt={"5%"} mb={"5%"}><Services /></Box>
+      <Box display={"flex"} justifyContent={"center"} mt={"5%"} mb={"5%"}><WorkWith /></Box>
+      <Box display={"flex"} justifyContent={"center"} mt={"5%"} mb={"5%"}><IdeaExecute /></Box>
+      {/* <Box display={"flex"} justifyContent={"center"} mt={"5%"} mb={"5%"}><SubHeroSection /></Box> */}
     </Box>
   )
 }

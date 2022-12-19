@@ -22,7 +22,7 @@ const color = {
   BLUE_800: "#2F6CB7",
   DARK_BLUE: "blue.800",
 
-  AZURE: "#227bed",
+  AZURE: "#316CB4",
 }
 
 const useColorManager = () => {

@@ -205,7 +205,7 @@ export const CAREER_INFO = [
 export const SHOW_TEXTS = [
   // #D499B9  #2E294E  #227BED  #011638
   {
-    color: "#438494",
+    color: "#E3963E",
     // color: "#f48924",
     showingText: "Performance",
   },
@@ -221,7 +221,7 @@ export const SHOW_TEXTS = [
   },
   {
     // color: "#371777",
-    color: "#492C1D",
+    color: "#EC7063",
     showingText: "Availability",
   },
 ];
@@ -265,14 +265,14 @@ export const SERVICES = [
   {
     id: "6",
     logo: ImplementationLogo,
-    header: "Implementation",
+    header: "DevOps",
     testMessage:
       "The end product is deployed to look for any final touches to be needed",
   },
   {
     id: "7",
     logo: MaintenanceLogo,
-    header: "Maintenance",
+    header: "Enhancement",
     testMessage:
       "After everything is finalized and launched, maintaining your software for best services is our priority too",
   },
