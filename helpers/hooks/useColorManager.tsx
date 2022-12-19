@@ -19,6 +19,7 @@ const color = {
 
   BLUE_200: "blue.200",
   BLUE_700: "blue.700",
+  BLUE_800: "#2F6CB7",
   DARK_BLUE: "blue.800",
 
   AZURE: "#227bed",
@@ -33,6 +34,7 @@ const useColorManager = () => {
   const OFF_WHITE = useColorModeValue(color.BLACK, color.OFF_WHITE);
   const DARK_OFF_WHITE = useColorModeValue(color.BLACK, color.DARK_OFF_WHITE);
   const DARK_BLUE = useColorModeValue(color.BLUE_200, color.DARK_BLUE);
+  const BLUE_800 = useColorModeValue(color.BLUE_200, color.BLUE_800);
   const BLUE = useColorModeValue(color.AZURE, color.BLUE_700);
   const BLACK_WHITE = useColorModeValue(color.BLACK, color.WHITE);
   const GRAY_GRAY_200 = useColorModeValue(color.GRAY_700, color.GRAY_800);
@@ -45,6 +47,7 @@ const useColorManager = () => {
     DARK_OFF_WHITE,
     DARK_BLUE,
     BLUE,
+    BLUE_800,
     BLACK_WHITE,
     GRAY_GRAY_200,
     BLACKA_WHITEA,
